@@ -1,0 +1,26 @@
+{
+    "area": "Victoria Harbour",
+    "station": "VS10",
+    "target_column": "cu",
+    "target_name": "Cu",
+    "train_start_date": "1986-07-01",
+    "train_end_date": "2024-07-25",
+    "n_observations": 76,
+    "cap_value": 510.0,
+    "floor_value": 0.0,
+    "q98_original": 425.0,
+    "fourier_order": 5,
+    "best_cv_mae": 71.92645372037627,
+    "best_cv_mape": 0.857088124584648,
+    "best_cv_rmse": 82.93606920305551,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.9,
+        "seasonality_prior_scale": 0.5,
+        "changepoint_prior_scale": 0.01
+    },
+    "final_in_sample_mae": 65.2179384311676,
+    "final_in_sample_rmse": 81.4122355009688,
+    "final_in_sample_mape": 45.01328839991803,
+    "trained_at": "2026-01-05 03:35:41"
+}

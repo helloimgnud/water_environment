@@ -1,0 +1,26 @@
+{
+    "area": "Southern",
+    "station": "SS1",
+    "target_column": "as",
+    "target_name": "As",
+    "train_start_date": "1987-08-25",
+    "train_end_date": "2024-07-06",
+    "n_observations": 73,
+    "cap_value": 10.881599999999999,
+    "floor_value": 0.0,
+    "q98_original": 9.068,
+    "fourier_order": 5,
+    "best_cv_mae": 1.03527685699715,
+    "best_cv_mape": 0.13827517072503628,
+    "best_cv_rmse": 1.2079045438443867,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.9,
+        "seasonality_prior_scale": 7.0,
+        "changepoint_prior_scale": 0.01
+    },
+    "final_in_sample_mae": 0.5710468024562347,
+    "final_in_sample_rmse": 0.7344914937132486,
+    "final_in_sample_mape": 8.166715150975698,
+    "trained_at": "2026-01-05 04:05:31"
+}

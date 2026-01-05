@@ -1,0 +1,28 @@
+{
+    "area": "Southern",
+    "station": "SM9",
+    "target_column": "ph",
+    "target_name": "pH",
+    "train_start_date": "1988-02-11",
+    "train_end_date": "2024-12-12",
+    "n_observations": 366,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 10.08,
+    "floor_value": 0.0,
+    "q98_original": 8.4,
+    "best_cv_mae_logspace": 0.02603672199566199,
+    "best_cv_mape_logspace": 0.011977151282979557,
+    "best_cv_rmse_logspace": 0.03196909755501122,
+    "final_in_sample_mae": 0.13683849867357786,
+    "final_in_sample_rmse": 0.1684538724844287,
+    "final_in_sample_mape": 1.7196209210112576,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.95,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 20.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-05 06:24:23"
+}

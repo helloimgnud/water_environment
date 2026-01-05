@@ -1,0 +1,28 @@
+{
+    "area": "Mirs Bay",
+    "station": "MS8",
+    "target_column": "tss",
+    "target_name": "TSS",
+    "train_start_date": "1991-02-04",
+    "train_end_date": "2024-12-09",
+    "n_observations": 371,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 6.815999999999987,
+    "floor_value": 0.0,
+    "q98_original": 5.67999999999999,
+    "best_cv_mae_logspace": 0.41663759620983504,
+    "best_cv_mape_logspace": 0.4574224019269973,
+    "best_cv_rmse_logspace": 0.5300651588963965,
+    "final_in_sample_mae": 1.1058553506927418,
+    "final_in_sample_rmse": 1.432629552975438,
+    "final_in_sample_mape": 102.29267697791468,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.8,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 20.0,
+        "changepoint_prior_scale": 0.1
+    },
+    "trained_at": "2026-01-05 20:39:22"
+}

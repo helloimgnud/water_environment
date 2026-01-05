@@ -1,0 +1,26 @@
+{
+    "area": "Southern",
+    "station": "SS4",
+    "target_column": "pb",
+    "target_name": "Pb",
+    "train_start_date": "1987-07-31",
+    "train_end_date": "2024-07-06",
+    "n_observations": 73,
+    "cap_value": 62.4,
+    "floor_value": 0.0,
+    "q98_original": 52.0,
+    "fourier_order": 5,
+    "best_cv_mae": 3.7535113048942437,
+    "best_cv_mape": 0.09330905446014057,
+    "best_cv_rmse": 4.548618097488341,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.8,
+        "seasonality_prior_scale": 0.5,
+        "changepoint_prior_scale": 0.01
+    },
+    "final_in_sample_mae": 3.2131766029082365,
+    "final_in_sample_rmse": 4.097727539206488,
+    "final_in_sample_mape": 7.777114853140052,
+    "trained_at": "2026-01-05 04:17:45"
+}

@@ -1,0 +1,26 @@
+{
+    "area": "Southern",
+    "station": "SS1",
+    "target_column": "zn",
+    "target_name": "Zn",
+    "train_start_date": "1987-08-25",
+    "train_end_date": "2024-07-06",
+    "n_observations": 73,
+    "cap_value": 107.23200000000001,
+    "floor_value": 0.0,
+    "q98_original": 89.36000000000001,
+    "fourier_order": 5,
+    "best_cv_mae": 7.656992513587438,
+    "best_cv_mape": 0.11519177242022724,
+    "best_cv_rmse": 8.898904959068966,
+    "best_params": {
+        "n_changepoints": 5,
+        "changepoint_range": 0.9,
+        "seasonality_prior_scale": 0.5,
+        "changepoint_prior_scale": 0.01
+    },
+    "final_in_sample_mae": 5.8035671000835025,
+    "final_in_sample_rmse": 7.64140601364662,
+    "final_in_sample_mape": 8.835347676530285,
+    "trained_at": "2026-01-05 04:12:45"
+}

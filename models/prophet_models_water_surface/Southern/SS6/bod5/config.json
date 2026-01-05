@@ -1,0 +1,28 @@
+{
+    "area": "Southern",
+    "station": "SS6",
+    "target_column": "bod5",
+    "target_name": "BOD\u2085",
+    "train_start_date": "1986-02-28",
+    "train_end_date": "2024-12-13",
+    "n_observations": 382,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 2.8055999999999988,
+    "floor_value": 0.0,
+    "q98_original": 2.337999999999999,
+    "best_cv_mae_logspace": 0.21727930438447288,
+    "best_cv_mape_logspace": 0.727953701210203,
+    "best_cv_rmse_logspace": 0.2751537972067084,
+    "final_in_sample_mae": 0.5435558742704147,
+    "final_in_sample_rmse": 0.6940667038985265,
+    "final_in_sample_mape": 124.94038499897454,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.9,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 20.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-05 19:23:55"
+}

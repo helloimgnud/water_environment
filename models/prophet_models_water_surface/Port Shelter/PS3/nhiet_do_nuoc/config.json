@@ -1,0 +1,25 @@
+{
+    "area": "Port Shelter",
+    "station": "PS3",
+    "target_column": "nhiet_do_nuoc",
+    "target_name": "Nhi\u1ec7t \u0111\u1ed9 n\u01b0\u1edbc",
+    "train_start_date": "1986-01-03",
+    "train_end_date": "2024-12-03",
+    "n_observations": 469,
+    "use_log_transform": true,
+    "fourier_order": 30,
+    "best_cv_mae_logspace": 0.046882858930491246,
+    "best_cv_mape_logspace": 0.014669693283829364,
+    "best_cv_rmse_logspace": 0.05987936780768062,
+    "final_in_sample_mae": 5.625679442368703,
+    "final_in_sample_rmse": 7.289174629473911,
+    "final_in_sample_mape": 24.899009105500973,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.95,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 20.0,
+        "changepoint_prior_scale": 0.1
+    },
+    "trained_at": "2026-01-05 20:05:36"
+}

@@ -1,0 +1,28 @@
+{
+    "area": "Mirs Bay",
+    "station": "MS7",
+    "target_column": "bod5",
+    "target_name": "BOD\u2085",
+    "train_start_date": "1991-01-29",
+    "train_end_date": "2024-12-08",
+    "n_observations": 358,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 2.64,
+    "floor_value": 0.0,
+    "q98_original": 2.2,
+    "best_cv_mae_logspace": 0.23395998178967092,
+    "best_cv_mape_logspace": 0.7595062229310574,
+    "best_cv_rmse_logspace": 0.2858005179272475,
+    "final_in_sample_mae": 0.4325869362276689,
+    "final_in_sample_rmse": 0.5565165612064058,
+    "final_in_sample_mape": 69.67704061094916,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.9,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 20.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-05 20:45:05"
+}

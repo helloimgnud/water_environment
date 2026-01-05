@@ -1,0 +1,28 @@
+{
+    "area": "Port Shelter",
+    "station": "PM11",
+    "target_column": "tss",
+    "target_name": "TSS",
+    "train_start_date": "1993-10-26",
+    "train_end_date": "2024-12-03",
+    "n_observations": 371,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 5.031529411764705,
+    "floor_value": 0.0,
+    "q98_original": 4.192941176470588,
+    "best_cv_mae_logspace": 0.35701226670639746,
+    "best_cv_mape_logspace": 0.3714913997649306,
+    "best_cv_rmse_logspace": 0.434468883540796,
+    "final_in_sample_mae": 0.6037091898683125,
+    "final_in_sample_rmse": 0.8080915186770095,
+    "final_in_sample_mape": 62.41466052326315,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.95,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 20.0,
+        "changepoint_prior_scale": 0.1
+    },
+    "trained_at": "2026-01-05 10:01:19"
+}

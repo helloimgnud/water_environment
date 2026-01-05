@@ -1,0 +1,26 @@
+{
+    "area": "Eastern Buffer",
+    "station": "ES1",
+    "target_column": "cd",
+    "target_name": "Cd",
+    "train_start_date": "1987-08-04",
+    "train_end_date": "2024-10-05",
+    "n_observations": 74,
+    "cap_value": 0.12,
+    "floor_value": 0.0,
+    "q98_original": 0.1,
+    "fourier_order": 5,
+    "best_cv_mae": 0.007818488877080719,
+    "best_cv_mape": 0.15636977754161444,
+    "best_cv_rmse": 0.010037965404294101,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.8,
+        "seasonality_prior_scale": 0.5,
+        "changepoint_prior_scale": 0.01
+    },
+    "final_in_sample_mae": 0.00873279962669131,
+    "final_in_sample_rmse": 0.014456909431072945,
+    "final_in_sample_mape": 7892241.148739556,
+    "trained_at": "2026-01-05 05:43:02"
+}

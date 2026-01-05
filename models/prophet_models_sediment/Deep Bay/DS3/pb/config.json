@@ -1,0 +1,26 @@
+{
+    "area": "Deep Bay",
+    "station": "DS3",
+    "target_column": "pb",
+    "target_name": "Pb",
+    "train_start_date": "1987-09-11",
+    "train_end_date": "2024-08-24",
+    "n_observations": 73,
+    "cap_value": 78.28800000000001,
+    "floor_value": 0.0,
+    "q98_original": 65.24000000000001,
+    "fourier_order": 5,
+    "best_cv_mae": 8.71278602410125,
+    "best_cv_mape": 0.17228338508710284,
+    "best_cv_rmse": 10.79006050275925,
+    "best_params": {
+        "n_changepoints": 15,
+        "changepoint_range": 0.9,
+        "seasonality_prior_scale": 0.5,
+        "changepoint_prior_scale": 0.01
+    },
+    "final_in_sample_mae": 6.532195883548307,
+    "final_in_sample_rmse": 8.2772992109098,
+    "final_in_sample_mape": 14.225754239683857,
+    "trained_at": "2026-01-05 08:00:00"
+}

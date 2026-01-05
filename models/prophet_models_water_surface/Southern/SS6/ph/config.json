@@ -1,0 +1,28 @@
+{
+    "area": "Southern",
+    "station": "SS6",
+    "target_column": "ph",
+    "target_name": "pH",
+    "train_start_date": "1986-02-28",
+    "train_end_date": "2024-12-13",
+    "n_observations": 382,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 10.319999999999999,
+    "floor_value": 0.0,
+    "q98_original": 8.6,
+    "best_cv_mae_logspace": 0.02893676750373081,
+    "best_cv_mape_logspace": 0.013260269766270738,
+    "best_cv_rmse_logspace": 0.03678931499897235,
+    "final_in_sample_mae": 0.21083577685531663,
+    "final_in_sample_rmse": 0.2690574637946996,
+    "final_in_sample_mape": 2.6152775921002855,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.9,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 20.0,
+        "changepoint_prior_scale": 0.5
+    },
+    "trained_at": "2026-01-05 19:34:11"
+}

@@ -1,0 +1,26 @@
+{
+    "area": "Southern",
+    "station": "SS2",
+    "target_column": "zn",
+    "target_name": "Zn",
+    "train_start_date": "1987-08-25",
+    "train_end_date": "2024-07-06",
+    "n_observations": 73,
+    "cap_value": 144.0,
+    "floor_value": 0.0,
+    "q98_original": 120.0,
+    "fourier_order": 5,
+    "best_cv_mae": 9.961346046065925,
+    "best_cv_mape": 0.09979489717784544,
+    "best_cv_rmse": 11.616919216509814,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.9,
+        "seasonality_prior_scale": 0.5,
+        "changepoint_prior_scale": 0.01
+    },
+    "final_in_sample_mae": 7.290362377011287,
+    "final_in_sample_rmse": 9.098919384735666,
+    "final_in_sample_mape": 7.50626471352193,
+    "trained_at": "2026-01-05 04:30:04"
+}

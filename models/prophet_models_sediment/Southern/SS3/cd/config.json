@@ -1,0 +1,26 @@
+{
+    "area": "Southern",
+    "station": "SS3",
+    "target_column": "cd",
+    "target_name": "Cd",
+    "train_start_date": "1987-08-25",
+    "train_end_date": "2024-07-06",
+    "n_observations": 74,
+    "cap_value": 0.09239999999999952,
+    "floor_value": 0.0,
+    "q98_original": 0.07699999999999961,
+    "fourier_order": 5,
+    "best_cv_mae": 0.009298796444901274,
+    "best_cv_mape": 0.18597592889802558,
+    "best_cv_rmse": 0.011094788392145791,
+    "best_params": {
+        "n_changepoints": 15,
+        "changepoint_range": 0.8,
+        "seasonality_prior_scale": 0.5,
+        "changepoint_prior_scale": 0.01
+    },
+    "final_in_sample_mae": 0.00571675081767413,
+    "final_in_sample_rmse": 0.012290320007827595,
+    "final_in_sample_mape": 18130805.726171162,
+    "trained_at": "2026-01-05 03:49:33"
+}

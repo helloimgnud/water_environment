@@ -1,0 +1,26 @@
+{
+    "area": "North Western",
+    "station": "NS4",
+    "target_column": "cd",
+    "target_name": "Cd",
+    "train_start_date": "1986-07-14",
+    "train_end_date": "2024-09-21",
+    "n_observations": 74,
+    "cap_value": 0.12,
+    "floor_value": 0.0,
+    "q98_original": 0.1,
+    "fourier_order": 5,
+    "best_cv_mae": 0.011654280503409893,
+    "best_cv_mape": 0.1906337568477362,
+    "best_cv_rmse": 0.01441276737215614,
+    "best_params": {
+        "n_changepoints": 15,
+        "changepoint_range": 0.8,
+        "seasonality_prior_scale": 0.5,
+        "changepoint_prior_scale": 0.01
+    },
+    "final_in_sample_mae": 0.014447995389911811,
+    "final_in_sample_rmse": 0.018739948877856703,
+    "final_in_sample_mape": 21.876760199871708,
+    "trained_at": "2026-01-05 05:08:42"
+}

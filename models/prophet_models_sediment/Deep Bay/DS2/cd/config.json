@@ -1,0 +1,26 @@
+{
+    "area": "Deep Bay",
+    "station": "DS2",
+    "target_column": "cd",
+    "target_name": "Cd",
+    "train_start_date": "1987-09-17",
+    "train_end_date": "2024-08-24",
+    "n_observations": 73,
+    "cap_value": 0.6,
+    "floor_value": 0.0,
+    "q98_original": 0.5,
+    "fourier_order": 5,
+    "best_cv_mae": 0.10278385006711777,
+    "best_cv_mape": 0.4962699071875967,
+    "best_cv_rmse": 0.12509523484802093,
+    "best_params": {
+        "n_changepoints": 15,
+        "changepoint_range": 0.9,
+        "seasonality_prior_scale": 7.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "final_in_sample_mae": 0.06708833867565508,
+    "final_in_sample_rmse": 0.08471704693715507,
+    "final_in_sample_mape": 36.88513170292183,
+    "trained_at": "2026-01-05 08:15:13"
+}

@@ -1,0 +1,28 @@
+{
+    "area": "North Western",
+    "station": "NM8",
+    "target_column": "ph",
+    "target_name": "pH",
+    "train_start_date": "1999-03-15",
+    "train_end_date": "2024-12-04",
+    "n_observations": 304,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 10.1928,
+    "floor_value": 0.0,
+    "q98_original": 8.494,
+    "best_cv_mae_logspace": 0.02909655965509809,
+    "best_cv_mape_logspace": 0.013296010834216655,
+    "best_cv_rmse_logspace": 0.034771332078000254,
+    "final_in_sample_mae": 0.14503283146020643,
+    "final_in_sample_rmse": 0.1820456591904669,
+    "final_in_sample_mape": 1.8135175143399729,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.8,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 5.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-05 07:11:23"
+}

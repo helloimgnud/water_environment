@@ -1,0 +1,25 @@
+{
+    "area": "Tolo Harbour and Channel",
+    "station": "TS4",
+    "target_column": "do_man",
+    "target_name": "DO (m\u1eb7n)",
+    "train_start_date": "1986-01-08",
+    "train_end_date": "2024-12-07",
+    "n_observations": 599,
+    "use_log_transform": true,
+    "fourier_order": 30,
+    "best_cv_mae_logspace": 0.037877750784866,
+    "best_cv_mape_logspace": 0.010969198256412155,
+    "best_cv_rmse_logspace": 0.04676519802459749,
+    "final_in_sample_mae": 1.3255059254796533,
+    "final_in_sample_rmse": 1.6808708503875647,
+    "final_in_sample_mape": 4.366054407610784,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.95,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 20.0,
+        "changepoint_prior_scale": 0.1
+    },
+    "trained_at": "2026-01-05 18:06:39"
+}

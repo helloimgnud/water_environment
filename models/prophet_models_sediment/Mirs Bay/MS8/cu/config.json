@@ -1,0 +1,26 @@
+{
+    "area": "Mirs Bay",
+    "station": "MS8",
+    "target_column": "cu",
+    "target_name": "Cu",
+    "train_start_date": "1995-04-19",
+    "train_end_date": "2024-08-29",
+    "n_observations": 59,
+    "cap_value": 20.4,
+    "floor_value": 0.0,
+    "q98_original": 17.0,
+    "fourier_order": 5,
+    "best_cv_mae": 2.1415914020267226,
+    "best_cv_mape": 0.15310707304901713,
+    "best_cv_rmse": 2.5301128244345366,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.9,
+        "seasonality_prior_scale": 0.5,
+        "changepoint_prior_scale": 0.01
+    },
+    "final_in_sample_mae": 1.1759730357241518,
+    "final_in_sample_rmse": 1.521219569188597,
+    "final_in_sample_mape": 8.92037533935409,
+    "trained_at": "2026-01-05 06:45:52"
+}

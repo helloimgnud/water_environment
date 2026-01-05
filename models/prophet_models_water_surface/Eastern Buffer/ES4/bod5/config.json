@@ -1,0 +1,28 @@
+{
+    "area": "Eastern Buffer",
+    "station": "ES4",
+    "target_column": "bod5",
+    "target_name": "BOD\u2085",
+    "train_start_date": "1986-01-16",
+    "train_end_date": "2024-12-10",
+    "n_observations": 468,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 2.76,
+    "floor_value": 0.0,
+    "q98_original": 2.3,
+    "best_cv_mae_logspace": 0.21646160178637133,
+    "best_cv_mape_logspace": 1.0369228679073728,
+    "best_cv_rmse_logspace": 0.27187942809327237,
+    "final_in_sample_mae": 0.45897179757475354,
+    "final_in_sample_rmse": 0.591777676659616,
+    "final_in_sample_mape": 107.24198028541483,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.9,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 10.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-05 19:58:29"
+}

@@ -1,0 +1,26 @@
+{
+    "area": "Mirs Bay",
+    "station": "MS2",
+    "target_column": "pb",
+    "target_name": "Pb",
+    "train_start_date": "1991-07-16",
+    "train_end_date": "2024-10-30",
+    "n_observations": 69,
+    "cap_value": 63.599999999999994,
+    "floor_value": 0.0,
+    "q98_original": 53.0,
+    "fourier_order": 5,
+    "best_cv_mae": 3.2202161326835537,
+    "best_cv_mape": 0.06542666032019635,
+    "best_cv_rmse": 3.842451933883146,
+    "best_params": {
+        "n_changepoints": 5,
+        "changepoint_range": 0.9,
+        "seasonality_prior_scale": 0.5,
+        "changepoint_prior_scale": 0.1
+    },
+    "final_in_sample_mae": 2.3189604962161043,
+    "final_in_sample_rmse": 2.9057382017709616,
+    "final_in_sample_mape": 4.967947738147723,
+    "trained_at": "2026-01-05 06:10:01"
+}

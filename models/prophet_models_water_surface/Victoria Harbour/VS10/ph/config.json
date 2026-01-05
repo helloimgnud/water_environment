@@ -1,0 +1,28 @@
+{
+    "area": "Victoria Harbour",
+    "station": "VS10",
+    "target_column": "ph",
+    "target_name": "pH",
+    "train_start_date": "1986-01-02",
+    "train_end_date": "2024-12-06",
+    "n_observations": 538,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 10.258468965517242,
+    "floor_value": 0.0,
+    "q98_original": 8.548724137931035,
+    "best_cv_mae_logspace": 0.02221516885515878,
+    "best_cv_mape_logspace": 0.010181731603230625,
+    "best_cv_rmse_logspace": 0.027109912107348765,
+    "final_in_sample_mae": 0.132787104982243,
+    "final_in_sample_rmse": 0.16757443389348142,
+    "final_in_sample_mape": 1.6560304946984103,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.8,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 10.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-05 05:28:37"
+}

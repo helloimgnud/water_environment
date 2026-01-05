@@ -1,0 +1,26 @@
+{
+    "area": "Victoria Harbour",
+    "station": "VS9",
+    "target_column": "cd",
+    "target_name": "Cd",
+    "train_start_date": "1986-07-01",
+    "train_end_date": "2024-07-25",
+    "n_observations": 75,
+    "cap_value": 0.84,
+    "floor_value": 0.0,
+    "q98_original": 0.7,
+    "fourier_order": 5,
+    "best_cv_mae": 0.12000812557528368,
+    "best_cv_mape": 0.4950226588310012,
+    "best_cv_rmse": 0.14734364121199206,
+    "best_params": {
+        "n_changepoints": 5,
+        "changepoint_range": 0.8,
+        "seasonality_prior_scale": 0.5,
+        "changepoint_prior_scale": 0.1
+    },
+    "final_in_sample_mae": 0.12412126422529451,
+    "final_in_sample_rmse": 0.16485695495223981,
+    "final_in_sample_mape": 86.1900670765128,
+    "trained_at": "2026-01-05 03:16:15"
+}

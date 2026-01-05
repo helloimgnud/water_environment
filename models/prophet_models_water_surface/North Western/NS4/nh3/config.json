@@ -1,0 +1,28 @@
+{
+    "area": "North Western",
+    "station": "NS4",
+    "target_column": "nh3",
+    "target_name": "NH\u2083-N",
+    "train_start_date": "1988-01-12",
+    "train_end_date": "2024-12-04",
+    "n_observations": 377,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 0.444,
+    "floor_value": 0.0,
+    "q98_original": 0.37,
+    "best_cv_mae_logspace": 0.04171140116188641,
+    "best_cv_mape_logspace": 1.3660967504278059,
+    "best_cv_rmse_logspace": 0.05574641338479899,
+    "final_in_sample_mae": 0.08608363816772573,
+    "final_in_sample_rmse": 0.10863569985274031,
+    "final_in_sample_mape": 209.264987666006,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.9,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 5.0,
+        "changepoint_prior_scale": 0.5
+    },
+    "trained_at": "2026-01-05 19:44:26"
+}

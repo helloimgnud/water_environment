@@ -1,0 +1,26 @@
+{
+    "area": "Eastern Buffer",
+    "station": "ES2",
+    "target_column": "cu",
+    "target_name": "Cu",
+    "train_start_date": "1987-08-04",
+    "train_end_date": "2024-10-05",
+    "n_observations": 74,
+    "cap_value": 50.4,
+    "floor_value": 0.0,
+    "q98_original": 42.0,
+    "fourier_order": 5,
+    "best_cv_mae": 9.92950767805893,
+    "best_cv_mape": 0.4537981836525995,
+    "best_cv_rmse": 11.761710660130074,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.9,
+        "seasonality_prior_scale": 0.5,
+        "changepoint_prior_scale": 0.01
+    },
+    "final_in_sample_mae": 5.677957132199839,
+    "final_in_sample_rmse": 7.16534707340551,
+    "final_in_sample_mape": 31.191133781841263,
+    "trained_at": "2026-01-05 05:55:10"
+}

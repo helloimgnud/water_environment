@@ -1,0 +1,26 @@
+{
+    "area": "Port Shelter",
+    "station": "PS6",
+    "target_column": "cu",
+    "target_name": "Cu",
+    "train_start_date": "1987-08-11",
+    "train_end_date": "2024-10-25",
+    "n_observations": 72,
+    "cap_value": 19.2,
+    "floor_value": 0.0,
+    "q98_original": 16.0,
+    "fourier_order": 5,
+    "best_cv_mae": 2.0469527608262448,
+    "best_cv_mape": 0.16658987582353837,
+    "best_cv_rmse": 2.3037124316918134,
+    "best_params": {
+        "n_changepoints": 15,
+        "changepoint_range": 0.9,
+        "seasonality_prior_scale": 0.5,
+        "changepoint_prior_scale": 0.1
+    },
+    "final_in_sample_mae": 1.3291605123481225,
+    "final_in_sample_rmse": 1.721885930799265,
+    "final_in_sample_mape": 11.609133923723691,
+    "trained_at": "2026-01-05 08:35:52"
+}

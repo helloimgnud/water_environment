@@ -1,0 +1,28 @@
+{
+    "area": "Tolo Harbour and Channel",
+    "station": "TS3",
+    "target_column": "bod5",
+    "target_name": "BOD\u2085",
+    "train_start_date": "1986-01-08",
+    "train_end_date": "2024-12-07",
+    "n_observations": 604,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 7.199999999999999,
+    "floor_value": 0.0,
+    "q98_original": 6.0,
+    "best_cv_mae_logspace": 0.25592187410130685,
+    "best_cv_mape_logspace": 0.3835802325309629,
+    "best_cv_rmse_logspace": 0.3295407814613324,
+    "final_in_sample_mae": 0.9929649519578413,
+    "final_in_sample_rmse": 1.2615523456818378,
+    "final_in_sample_mape": 65.29175776879562,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.9,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 5.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-05 18:34:01"
+}

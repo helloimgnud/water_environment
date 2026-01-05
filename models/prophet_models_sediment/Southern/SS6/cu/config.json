@@ -1,0 +1,26 @@
+{
+    "area": "Southern",
+    "station": "SS6",
+    "target_column": "cu",
+    "target_name": "Cu",
+    "train_start_date": "1987-07-31",
+    "train_end_date": "2024-07-29",
+    "n_observations": 73,
+    "cap_value": 20.544000000000004,
+    "floor_value": 0.0,
+    "q98_original": 17.120000000000005,
+    "fourier_order": 5,
+    "best_cv_mae": 3.7481456798343507,
+    "best_cv_mape": 0.5528338972123935,
+    "best_cv_rmse": 3.989408237726266,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.8,
+        "seasonality_prior_scale": 0.5,
+        "changepoint_prior_scale": 0.05
+    },
+    "final_in_sample_mae": 1.8933721278337885,
+    "final_in_sample_rmse": 2.5066213278666463,
+    "final_in_sample_mape": 22.988028974217727,
+    "trained_at": "2026-01-05 04:37:22"
+}

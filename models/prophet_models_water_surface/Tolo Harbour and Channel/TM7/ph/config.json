@@ -1,0 +1,28 @@
+{
+    "area": "Tolo Harbour and Channel",
+    "station": "TM7",
+    "target_column": "ph",
+    "target_name": "pH",
+    "train_start_date": "1988-01-06",
+    "train_end_date": "2024-12-07",
+    "n_observations": 540,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 10.56,
+    "floor_value": 0.0,
+    "q98_original": 8.8,
+    "best_cv_mae_logspace": 0.01784515925695467,
+    "best_cv_mape_logspace": 0.00810375124486743,
+    "best_cv_rmse_logspace": 0.022287591583935718,
+    "final_in_sample_mae": 0.14877463219999157,
+    "final_in_sample_rmse": 0.18660075772973217,
+    "final_in_sample_mape": 1.8057156877746467,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.8,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 50.0,
+        "changepoint_prior_scale": 0.5
+    },
+    "trained_at": "2026-01-05 03:51:02"
+}

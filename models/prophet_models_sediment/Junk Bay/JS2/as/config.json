@@ -1,0 +1,26 @@
+{
+    "area": "Junk Bay",
+    "station": "JS2",
+    "target_column": "as",
+    "target_name": "As",
+    "train_start_date": "1987-08-04",
+    "train_end_date": "2024-10-05",
+    "n_observations": 73,
+    "cap_value": 12.0,
+    "floor_value": 0.0,
+    "q98_original": 10.0,
+    "fourier_order": 5,
+    "best_cv_mae": 1.3219096055074036,
+    "best_cv_mape": 0.16322204248166478,
+    "best_cv_rmse": 1.5884186484751301,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.8,
+        "seasonality_prior_scale": 5.0,
+        "changepoint_prior_scale": 0.01
+    },
+    "final_in_sample_mae": 0.8067864716041631,
+    "final_in_sample_rmse": 1.063588535770405,
+    "final_in_sample_mape": 10.655864298855452,
+    "trained_at": "2026-01-05 07:47:57"
+}

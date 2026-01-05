@@ -1,0 +1,28 @@
+{
+    "area": "Southern",
+    "station": "SM4",
+    "target_column": "tss",
+    "target_name": "TSS",
+    "train_start_date": "1986-02-01",
+    "train_end_date": "2024-12-11",
+    "n_observations": 382,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 8.9256,
+    "floor_value": 0.0,
+    "q98_original": 7.438,
+    "best_cv_mae_logspace": 0.37422664801170713,
+    "best_cv_mape_logspace": 0.3270472708944337,
+    "best_cv_rmse_logspace": 0.4730368582344869,
+    "final_in_sample_mae": 1.081778976877528,
+    "final_in_sample_rmse": 1.458141338597851,
+    "final_in_sample_mape": 46.05150065293827,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.95,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 10.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-05 06:17:36"
+}

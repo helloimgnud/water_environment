@@ -1,0 +1,26 @@
+{
+    "area": "Western Buffer",
+    "station": "WS1",
+    "target_column": "cd",
+    "target_name": "Cd",
+    "train_start_date": "1987-08-28",
+    "train_end_date": "2024-07-25",
+    "n_observations": 72,
+    "cap_value": 0.36,
+    "floor_value": 0.0,
+    "q98_original": 0.3,
+    "fourier_order": 5,
+    "best_cv_mae": 0.05708323729994394,
+    "best_cv_mape": 0.3241443694360887,
+    "best_cv_rmse": 0.06868542040492708,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.8,
+        "seasonality_prior_scale": 7.0,
+        "changepoint_prior_scale": 0.01
+    },
+    "final_in_sample_mae": 0.045492101020882365,
+    "final_in_sample_rmse": 0.0532882258963171,
+    "final_in_sample_mape": 32.17310473726257,
+    "trained_at": "2026-01-05 05:25:53"
+}

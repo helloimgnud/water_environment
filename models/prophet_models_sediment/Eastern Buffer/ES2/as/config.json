@@ -1,0 +1,26 @@
+{
+    "area": "Eastern Buffer",
+    "station": "ES2",
+    "target_column": "as",
+    "target_name": "As",
+    "train_start_date": "1987-08-04",
+    "train_end_date": "2024-10-05",
+    "n_observations": 74,
+    "cap_value": 11.28,
+    "floor_value": 0.0,
+    "q98_original": 9.4,
+    "fourier_order": 5,
+    "best_cv_mae": 1.3300063535483817,
+    "best_cv_mape": 0.21987062575281321,
+    "best_cv_rmse": 1.6565717391435466,
+    "best_params": {
+        "n_changepoints": 15,
+        "changepoint_range": 0.9,
+        "seasonality_prior_scale": 0.5,
+        "changepoint_prior_scale": 0.1
+    },
+    "final_in_sample_mae": 1.0436279300987592,
+    "final_in_sample_rmse": 1.3577161224211047,
+    "final_in_sample_mape": 17.681289485689284,
+    "trained_at": "2026-01-05 05:49:54"
+}

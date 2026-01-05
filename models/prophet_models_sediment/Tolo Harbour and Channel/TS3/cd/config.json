@@ -1,0 +1,26 @@
+{
+    "area": "Tolo Harbour and Channel",
+    "station": "TS3",
+    "target_column": "cd",
+    "target_name": "Cd",
+    "train_start_date": "1987-08-27",
+    "train_end_date": "2024-08-28",
+    "n_observations": 81,
+    "cap_value": 0.8880000000000007,
+    "floor_value": 0.0,
+    "q98_original": 0.7400000000000005,
+    "fourier_order": 5,
+    "best_cv_mae": 0.15123611920104751,
+    "best_cv_mape": 0.3092183966254614,
+    "best_cv_rmse": 0.16967624120536032,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.9,
+        "seasonality_prior_scale": 0.5,
+        "changepoint_prior_scale": 0.01
+    },
+    "final_in_sample_mae": 0.11405904707526729,
+    "final_in_sample_rmse": 0.14294879300200927,
+    "final_in_sample_mape": 29.148586463685085,
+    "trained_at": "2026-01-05 02:42:48"
+}

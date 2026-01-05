@@ -1,0 +1,28 @@
+{
+    "area": "Victoria Harbour",
+    "station": "VM6",
+    "target_column": "tss",
+    "target_name": "TSS",
+    "train_start_date": "1988-01-14",
+    "train_end_date": "2024-12-30",
+    "n_observations": 493,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 11.4,
+    "floor_value": 0.0,
+    "q98_original": 9.5,
+    "best_cv_mae_logspace": 0.41437018603217873,
+    "best_cv_mape_logspace": 0.24622254541538144,
+    "best_cv_rmse_logspace": 0.5121631298591889,
+    "final_in_sample_mae": 1.4897448429494156,
+    "final_in_sample_rmse": 1.9088173054123467,
+    "final_in_sample_mape": 47.38006665240327,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.9,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 5.0,
+        "changepoint_prior_scale": 0.1
+    },
+    "trained_at": "2026-01-05 04:32:56"
+}

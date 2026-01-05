@@ -1,0 +1,28 @@
+{
+    "area": "Junk Bay",
+    "station": "JS2",
+    "target_column": "bod5",
+    "target_name": "BOD\u2085",
+    "train_start_date": "1986-01-16",
+    "train_end_date": "2024-12-10",
+    "n_observations": 460,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 2.858399999999999,
+    "floor_value": 0.0,
+    "q98_original": 2.3819999999999992,
+    "best_cv_mae_logspace": 0.2370725840452368,
+    "best_cv_mape_logspace": 0.8579126736057369,
+    "best_cv_rmse_logspace": 0.29343792515292616,
+    "final_in_sample_mae": 0.4643772333715766,
+    "final_in_sample_rmse": 0.6166535323769033,
+    "final_in_sample_mape": 87.18475718601415,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.9,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 50.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-05 21:11:59"
+}

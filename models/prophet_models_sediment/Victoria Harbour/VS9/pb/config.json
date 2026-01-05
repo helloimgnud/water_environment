@@ -1,0 +1,26 @@
+{
+    "area": "Victoria Harbour",
+    "station": "VS9",
+    "target_column": "pb",
+    "target_name": "Pb",
+    "train_start_date": "1986-07-01",
+    "train_end_date": "2024-07-25",
+    "n_observations": 75,
+    "cap_value": 73.824,
+    "floor_value": 0.0,
+    "q98_original": 61.519999999999996,
+    "fourier_order": 5,
+    "best_cv_mae": 9.038175529381785,
+    "best_cv_mape": 0.22639795460066783,
+    "best_cv_rmse": 9.82934680277565,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.8,
+        "seasonality_prior_scale": 3.0,
+        "changepoint_prior_scale": 0.01
+    },
+    "final_in_sample_mae": 7.487509979921115,
+    "final_in_sample_rmse": 9.343420223126595,
+    "final_in_sample_mape": 20.740993031362265,
+    "trained_at": "2026-01-05 03:17:57"
+}

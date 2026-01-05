@@ -1,0 +1,26 @@
+{
+    "area": "North Western",
+    "station": "NS4",
+    "target_column": "as",
+    "target_name": "As",
+    "train_start_date": "1986-07-14",
+    "train_end_date": "2024-09-21",
+    "n_observations": 74,
+    "cap_value": 19.2,
+    "floor_value": 0.0,
+    "q98_original": 16.0,
+    "fourier_order": 5,
+    "best_cv_mae": 1.6298381263169195,
+    "best_cv_mape": 0.1444912250389467,
+    "best_cv_rmse": 1.9557157601007706,
+    "best_params": {
+        "n_changepoints": 5,
+        "changepoint_range": 0.9,
+        "seasonality_prior_scale": 1.0,
+        "changepoint_prior_scale": 0.1
+    },
+    "final_in_sample_mae": 1.570434431272417,
+    "final_in_sample_rmse": 1.922702285391692,
+    "final_in_sample_mape": 14.294100829106524,
+    "trained_at": "2026-01-05 05:06:52"
+}

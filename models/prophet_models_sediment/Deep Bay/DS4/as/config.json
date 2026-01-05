@@ -1,0 +1,26 @@
+{
+    "area": "Deep Bay",
+    "station": "DS4",
+    "target_column": "as",
+    "target_name": "As",
+    "train_start_date": "1991-09-09",
+    "train_end_date": "2024-08-24",
+    "n_observations": 67,
+    "cap_value": 21.599999999999998,
+    "floor_value": 0.0,
+    "q98_original": 18.0,
+    "fourier_order": 5,
+    "best_cv_mae": 3.827746670267107,
+    "best_cv_mape": 0.26531344141413804,
+    "best_cv_rmse": 4.451984245405884,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.9,
+        "seasonality_prior_scale": 1.0,
+        "changepoint_prior_scale": 0.01
+    },
+    "final_in_sample_mae": 2.0343813022165707,
+    "final_in_sample_rmse": 2.4929162069695687,
+    "final_in_sample_mape": 16.781087295243825,
+    "trained_at": "2026-01-05 08:05:16"
+}

@@ -1,0 +1,26 @@
+{
+    "area": "Western Buffer",
+    "station": "WS1",
+    "target_column": "cu",
+    "target_name": "Cu",
+    "train_start_date": "1987-08-28",
+    "train_end_date": "2024-07-25",
+    "n_observations": 72,
+    "cap_value": 105.09599999999999,
+    "floor_value": 0.0,
+    "q98_original": 87.58,
+    "fourier_order": 5,
+    "best_cv_mae": 11.884765922521604,
+    "best_cv_mape": 0.24285823564224027,
+    "best_cv_rmse": 13.657145102437909,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.8,
+        "seasonality_prior_scale": 1.0,
+        "changepoint_prior_scale": 0.01
+    },
+    "final_in_sample_mae": 10.002314977823552,
+    "final_in_sample_rmse": 14.243021555793376,
+    "final_in_sample_mape": 28.557004317869712,
+    "trained_at": "2026-01-05 05:29:10"
+}

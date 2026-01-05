@@ -1,0 +1,25 @@
+{
+    "area": "Tolo Harbour and Channel",
+    "station": "TM2",
+    "target_column": "nhiet_do_nuoc",
+    "target_name": "Nhi\u1ec7t \u0111\u1ed9 n\u01b0\u1edbc",
+    "train_start_date": "1986-01-08",
+    "train_end_date": "2024-12-07",
+    "n_observations": 592,
+    "use_log_transform": true,
+    "fourier_order": 30,
+    "best_cv_mae_logspace": 0.04661130893802153,
+    "best_cv_mape_logspace": 0.014581272889376192,
+    "best_cv_rmse_logspace": 0.058471611766021676,
+    "final_in_sample_mae": 1.1361824295937932,
+    "final_in_sample_rmse": 1.4805608061260846,
+    "final_in_sample_mape": 5.02747216734976,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.8,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 1.0,
+        "changepoint_prior_scale": 0.5
+    },
+    "trained_at": "2026-01-05 03:27:59"
+}

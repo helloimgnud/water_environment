@@ -1,0 +1,26 @@
+{
+    "area": "Mirs Bay",
+    "station": "MS13",
+    "target_column": "cd",
+    "target_name": "Cd",
+    "train_start_date": "1995-04-19",
+    "train_end_date": "2024-08-29",
+    "n_observations": 58,
+    "cap_value": 0.06,
+    "floor_value": 0.0,
+    "q98_original": 0.05,
+    "fourier_order": 5,
+    "best_cv_mae": 0.0,
+    "best_cv_mape": 0.0,
+    "best_cv_rmse": 0.0,
+    "best_params": {
+        "n_changepoints": 5,
+        "changepoint_range": 0.8,
+        "seasonality_prior_scale": 0.5,
+        "changepoint_prior_scale": 0.01
+    },
+    "final_in_sample_mae": 4.350366788658422e-06,
+    "final_in_sample_rmse": 6.943725041485634e-06,
+    "final_in_sample_mape": 0.008700731837170475,
+    "trained_at": "2026-01-05 07:25:19"
+}

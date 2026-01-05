@@ -1,0 +1,25 @@
+{
+    "area": "Deep Bay",
+    "station": "DS2",
+    "target_column": "do_man",
+    "target_name": "DO (m\u1eb7n)",
+    "train_start_date": "1986-02-14",
+    "train_end_date": "2024-12-15",
+    "n_observations": 460,
+    "use_log_transform": true,
+    "fourier_order": 30,
+    "best_cv_mae_logspace": 0.15898327004938467,
+    "best_cv_mape_logspace": 0.05863701335162301,
+    "best_cv_rmse_logspace": 0.21878166509234,
+    "final_in_sample_mae": 8.374743644162617,
+    "final_in_sample_rmse": 10.494028395156125,
+    "final_in_sample_mape": 59.54124513550333,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.9,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 10.0,
+        "changepoint_prior_scale": 0.01
+    },
+    "trained_at": "2026-01-05 19:57:45"
+}

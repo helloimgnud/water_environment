@@ -1,0 +1,26 @@
+{
+    "area": "Junk Bay",
+    "station": "JS2",
+    "target_column": "zn",
+    "target_name": "Zn",
+    "train_start_date": "1987-08-04",
+    "train_end_date": "2024-10-05",
+    "n_observations": 73,
+    "cap_value": 240.0,
+    "floor_value": 0.0,
+    "q98_original": 200.0,
+    "fourier_order": 5,
+    "best_cv_mae": 28.17813740008219,
+    "best_cv_mape": 0.19356566997602737,
+    "best_cv_rmse": 34.45155386040762,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.8,
+        "seasonality_prior_scale": 0.5,
+        "changepoint_prior_scale": 0.01
+    },
+    "final_in_sample_mae": 17.34664718014843,
+    "final_in_sample_rmse": 23.478519628104046,
+    "final_in_sample_mape": 13.04380686450978,
+    "trained_at": "2026-01-05 07:54:47"
+}

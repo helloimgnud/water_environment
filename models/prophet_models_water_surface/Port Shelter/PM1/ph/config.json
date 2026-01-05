@@ -1,0 +1,28 @@
+{
+    "area": "Port Shelter",
+    "station": "PM1",
+    "target_column": "ph",
+    "target_name": "pH",
+    "train_start_date": "1986-01-15",
+    "train_end_date": "2024-12-03",
+    "n_observations": 439,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 10.319999999999999,
+    "floor_value": 0.0,
+    "q98_original": 8.6,
+    "best_cv_mae_logspace": 0.021759429991712095,
+    "best_cv_mape_logspace": 0.00988285444653836,
+    "best_cv_rmse_logspace": 0.02667821915938864,
+    "final_in_sample_mae": 0.12588519739531934,
+    "final_in_sample_rmse": 0.15804727594796258,
+    "final_in_sample_mape": 1.5467005199992738,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.8,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 10.0,
+        "changepoint_prior_scale": 0.5
+    },
+    "trained_at": "2026-01-05 10:37:16"
+}

@@ -1,0 +1,26 @@
+{
+    "area": "Southern",
+    "station": "SS4",
+    "target_column": "cd",
+    "target_name": "Cd",
+    "train_start_date": "1987-07-31",
+    "train_end_date": "2024-07-06",
+    "n_observations": 73,
+    "cap_value": 0.09360000000000014,
+    "floor_value": 0.0,
+    "q98_original": 0.07800000000000012,
+    "fourier_order": 5,
+    "best_cv_mae": 0.0056097588725148384,
+    "best_cv_mape": 0.11219517745029679,
+    "best_cv_rmse": 0.006852051951080347,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.9,
+        "seasonality_prior_scale": 0.5,
+        "changepoint_prior_scale": 0.1
+    },
+    "final_in_sample_mae": 0.004166907121037769,
+    "final_in_sample_rmse": 0.009683375641205836,
+    "final_in_sample_mape": 6271553.269663429,
+    "trained_at": "2026-01-05 04:16:05"
+}

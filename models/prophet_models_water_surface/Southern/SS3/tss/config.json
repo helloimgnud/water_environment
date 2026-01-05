@@ -1,0 +1,28 @@
+{
+    "area": "Southern",
+    "station": "SS3",
+    "target_column": "tss",
+    "target_name": "TSS",
+    "train_start_date": "1986-02-01",
+    "train_end_date": "2024-12-11",
+    "n_observations": 393,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 11.539199999999996,
+    "floor_value": 0.0,
+    "q98_original": 9.615999999999996,
+    "best_cv_mae_logspace": 0.44617225031106195,
+    "best_cv_mape_logspace": 0.3163112842032592,
+    "best_cv_rmse_logspace": 0.5686760535799384,
+    "final_in_sample_mae": 2.0582437841036247,
+    "final_in_sample_rmse": 2.60961275576116,
+    "final_in_sample_mape": 85.3238618153718,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.8,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 20.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-05 19:02:58"
+}

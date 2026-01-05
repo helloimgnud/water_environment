@@ -1,0 +1,26 @@
+{
+    "area": "Western Buffer",
+    "station": "WS1",
+    "target_column": "as",
+    "target_name": "As",
+    "train_start_date": "1987-08-28",
+    "train_end_date": "2024-07-25",
+    "n_observations": 72,
+    "cap_value": 14.399999999999999,
+    "floor_value": 0.0,
+    "q98_original": 12.0,
+    "fourier_order": 5,
+    "best_cv_mae": 1.6251403859110314,
+    "best_cv_mape": 0.16245689955364873,
+    "best_cv_rmse": 1.8126342400052704,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.8,
+        "seasonality_prior_scale": 10.0,
+        "changepoint_prior_scale": 0.01
+    },
+    "final_in_sample_mae": 1.124526821783614,
+    "final_in_sample_rmse": 1.4728945724727913,
+    "final_in_sample_mape": 13.345875379242075,
+    "trained_at": "2026-01-05 05:24:07"
+}

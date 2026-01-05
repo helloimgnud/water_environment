@@ -1,0 +1,26 @@
+{
+    "area": "North Western",
+    "station": "NS2",
+    "target_column": "pb",
+    "target_name": "Pb",
+    "train_start_date": "1987-07-09",
+    "train_end_date": "2024-09-21",
+    "n_observations": 72,
+    "cap_value": 66.696,
+    "floor_value": 0.0,
+    "q98_original": 55.58,
+    "fourier_order": 5,
+    "best_cv_mae": 7.3120759113099165,
+    "best_cv_mape": 0.17637787401931754,
+    "best_cv_rmse": 8.191330958988386,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.9,
+        "seasonality_prior_scale": 0.5,
+        "changepoint_prior_scale": 0.01
+    },
+    "final_in_sample_mae": 5.19714459526975,
+    "final_in_sample_rmse": 6.253848042592707,
+    "final_in_sample_mape": 13.310013725179884,
+    "trained_at": "2026-01-05 05:01:39"
+}

@@ -1,0 +1,25 @@
+{
+    "area": "North Western",
+    "station": "NS2",
+    "target_column": "do_man",
+    "target_name": "DO (m\u1eb7n)",
+    "train_start_date": "1986-01-30",
+    "train_end_date": "2024-12-04",
+    "n_observations": 389,
+    "use_log_transform": true,
+    "fourier_order": 30,
+    "best_cv_mae_logspace": 0.1125204776401045,
+    "best_cv_mape_logspace": 0.037128213692415445,
+    "best_cv_rmse_logspace": 0.1485358907433797,
+    "final_in_sample_mae": 7.275637461013033,
+    "final_in_sample_rmse": 9.209410066921972,
+    "final_in_sample_mape": 32.98821140569409,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.95,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 20.0,
+        "changepoint_prior_scale": 0.01
+    },
+    "trained_at": "2026-01-05 18:43:57"
+}

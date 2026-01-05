@@ -1,0 +1,28 @@
+{
+    "area": "Victoria Harbour",
+    "station": "VM4",
+    "target_column": "ph",
+    "target_name": "pH",
+    "train_start_date": "1988-01-14",
+    "train_end_date": "2024-12-30",
+    "n_observations": 497,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 10.2,
+    "floor_value": 0.0,
+    "q98_original": 8.5,
+    "best_cv_mae_logspace": 0.022599236113785934,
+    "best_cv_mape_logspace": 0.010415092405899561,
+    "best_cv_rmse_logspace": 0.02788270105576571,
+    "final_in_sample_mae": 0.14325371508143178,
+    "final_in_sample_rmse": 0.17722487415268107,
+    "final_in_sample_mape": 1.8013216484825154,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.9,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 50.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-05 04:52:02"
+}

@@ -1,0 +1,25 @@
+{
+    "area": "North Western",
+    "station": "NM8",
+    "target_column": "nhiet_do_nuoc",
+    "target_name": "Nhi\u1ec7t \u0111\u1ed9 n\u01b0\u1edbc",
+    "train_start_date": "1999-03-15",
+    "train_end_date": "2024-12-04",
+    "n_observations": 304,
+    "use_log_transform": true,
+    "fourier_order": 30,
+    "best_cv_mae_logspace": 0.04607656149274483,
+    "best_cv_mape_logspace": 0.014487014144726224,
+    "best_cv_rmse_logspace": 0.059340736458484346,
+    "final_in_sample_mae": 0.9194622890739396,
+    "final_in_sample_rmse": 1.1645314269079001,
+    "final_in_sample_mape": 4.030822753609846,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.95,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 1.0,
+        "changepoint_prior_scale": 0.01
+    },
+    "trained_at": "2026-01-05 05:44:52"
+}

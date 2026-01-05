@@ -1,0 +1,25 @@
+{
+    "area": "Tolo Harbour and Channel",
+    "station": "TS3",
+    "target_column": "do_man",
+    "target_name": "DO (m\u1eb7n)",
+    "train_start_date": "1986-01-08",
+    "train_end_date": "2024-12-07",
+    "n_observations": 604,
+    "use_log_transform": true,
+    "fourier_order": 30,
+    "best_cv_mae_logspace": 0.04264582951746464,
+    "best_cv_mape_logspace": 0.012392812289940202,
+    "best_cv_rmse_logspace": 0.05268901693853076,
+    "final_in_sample_mae": 1.3252445863645723,
+    "final_in_sample_rmse": 1.684396570714878,
+    "final_in_sample_mape": 4.4282638749335375,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.95,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 20.0,
+        "changepoint_prior_scale": 0.1
+    },
+    "trained_at": "2026-01-05 18:03:15"
+}

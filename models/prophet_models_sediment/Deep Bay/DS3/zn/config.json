@@ -1,0 +1,26 @@
+{
+    "area": "Deep Bay",
+    "station": "DS3",
+    "target_column": "zn",
+    "target_name": "Zn",
+    "train_start_date": "1987-09-11",
+    "train_end_date": "2024-08-24",
+    "n_observations": 73,
+    "cap_value": 228.0,
+    "floor_value": 0.0,
+    "q98_original": 190.0,
+    "fourier_order": 5,
+    "best_cv_mae": 28.529052408031838,
+    "best_cv_mape": 0.19199766467272786,
+    "best_cv_rmse": 33.31824243892885,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.8,
+        "seasonality_prior_scale": 0.5,
+        "changepoint_prior_scale": 0.05
+    },
+    "final_in_sample_mae": 24.0705579610654,
+    "final_in_sample_rmse": 29.577164923288418,
+    "final_in_sample_mape": 20.947090568143846,
+    "trained_at": "2026-01-05 08:03:30"
+}

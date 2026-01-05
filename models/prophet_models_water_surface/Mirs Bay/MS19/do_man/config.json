@@ -1,0 +1,25 @@
+{
+    "area": "Mirs Bay",
+    "station": "MS19",
+    "target_column": "do_man",
+    "target_name": "DO (m\u1eb7n)",
+    "train_start_date": "2001-01-22",
+    "train_end_date": "2024-12-09",
+    "n_observations": 280,
+    "use_log_transform": true,
+    "fourier_order": 30,
+    "best_cv_mae_logspace": 0.02066457632280877,
+    "best_cv_mape_logspace": 0.005890495260307585,
+    "best_cv_rmse_logspace": 0.026389886443065756,
+    "final_in_sample_mae": 0.6595996046660106,
+    "final_in_sample_rmse": 0.8420453763837387,
+    "final_in_sample_mape": 2.0492455850372457,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.9,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 1.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-05 07:07:29"
+}

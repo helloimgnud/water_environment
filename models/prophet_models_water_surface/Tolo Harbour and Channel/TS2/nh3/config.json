@@ -1,0 +1,28 @@
+{
+    "area": "Tolo Harbour and Channel",
+    "station": "TS2",
+    "target_column": "nh3",
+    "target_name": "NH\u2083-N",
+    "train_start_date": "1986-01-08",
+    "train_end_date": "2024-12-07",
+    "n_observations": 599,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 0.22799999999999998,
+    "floor_value": 0.0,
+    "q98_original": 0.19,
+    "best_cv_mae_logspace": 0.022878378581617776,
+    "best_cv_mape_logspace": 0.8528899381507035,
+    "best_cv_rmse_logspace": 0.033638836683668766,
+    "final_in_sample_mae": 0.03377557030271608,
+    "final_in_sample_rmse": 0.04315064161368437,
+    "final_in_sample_mape": 206.64394944727005,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.95,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 20.0,
+        "changepoint_prior_scale": 0.1
+    },
+    "trained_at": "2026-01-05 18:45:13"
+}

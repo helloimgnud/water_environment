@@ -1,0 +1,26 @@
+{
+    "area": "North Western",
+    "station": "NS4",
+    "target_column": "zn",
+    "target_name": "Zn",
+    "train_start_date": "1986-07-14",
+    "train_end_date": "2024-09-21",
+    "n_observations": 74,
+    "cap_value": 156.0,
+    "floor_value": 0.0,
+    "q98_original": 130.0,
+    "fourier_order": 5,
+    "best_cv_mae": 13.296061155041913,
+    "best_cv_mape": 0.13297780385281513,
+    "best_cv_rmse": 14.755410743042015,
+    "best_params": {
+        "n_changepoints": 15,
+        "changepoint_range": 0.8,
+        "seasonality_prior_scale": 0.5,
+        "changepoint_prior_scale": 0.1
+    },
+    "final_in_sample_mae": 9.31066876375471,
+    "final_in_sample_rmse": 11.711206649095503,
+    "final_in_sample_mape": 10.000207626025235,
+    "trained_at": "2026-01-05 05:13:50"
+}

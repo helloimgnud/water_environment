@@ -1,0 +1,25 @@
+{
+    "area": "Port Shelter",
+    "station": "PM6",
+    "target_column": "do_man",
+    "target_name": "DO (m\u1eb7n)",
+    "train_start_date": "1986-01-15",
+    "train_end_date": "2024-12-03",
+    "n_observations": 441,
+    "use_log_transform": true,
+    "fourier_order": 30,
+    "best_cv_mae_logspace": 0.037622831365043324,
+    "best_cv_mape_logspace": 0.010825522610582053,
+    "best_cv_rmse_logspace": 0.045610545963594075,
+    "final_in_sample_mae": 0.866210651686122,
+    "final_in_sample_rmse": 1.1202325180152832,
+    "final_in_sample_mape": 2.782156342405242,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.8,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 20.0,
+        "changepoint_prior_scale": 0.5
+    },
+    "trained_at": "2026-01-05 08:21:05"
+}

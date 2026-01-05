@@ -1,0 +1,26 @@
+{
+    "area": "Port Shelter",
+    "station": "PS3",
+    "target_column": "as",
+    "target_name": "As",
+    "train_start_date": "1987-08-11",
+    "train_end_date": "2024-10-25",
+    "n_observations": 74,
+    "cap_value": 10.384799999999997,
+    "floor_value": 0.0,
+    "q98_original": 8.653999999999998,
+    "fourier_order": 5,
+    "best_cv_mae": 1.1711240058848364,
+    "best_cv_mape": 0.16396114925131663,
+    "best_cv_rmse": 1.3717354534408297,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.8,
+        "seasonality_prior_scale": 10.0,
+        "changepoint_prior_scale": 0.01
+    },
+    "final_in_sample_mae": 0.7657527948509543,
+    "final_in_sample_rmse": 1.0039712474260067,
+    "final_in_sample_mape": 12.580517219076476,
+    "trained_at": "2026-01-05 08:47:51"
+}

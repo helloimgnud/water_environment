@@ -1,0 +1,26 @@
+{
+    "area": "Victoria Harbour",
+    "station": "VS5",
+    "target_column": "zn",
+    "target_name": "Zn",
+    "train_start_date": "1986-07-01",
+    "train_end_date": "2024-07-25",
+    "n_observations": 74,
+    "cap_value": 402.4799999999999,
+    "floor_value": 0.0,
+    "q98_original": 335.3999999999999,
+    "fourier_order": 5,
+    "best_cv_mae": 82.41221726449675,
+    "best_cv_mape": 0.435240284349716,
+    "best_cv_rmse": 95.68276305102161,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.8,
+        "seasonality_prior_scale": 1.0,
+        "changepoint_prior_scale": 0.1
+    },
+    "final_in_sample_mae": 55.69842584335882,
+    "final_in_sample_rmse": 66.51408328918986,
+    "final_in_sample_mape": 39.23514947156798,
+    "trained_at": "2026-01-05 03:45:57"
+}

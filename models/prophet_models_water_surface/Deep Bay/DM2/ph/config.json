@@ -1,0 +1,28 @@
+{
+    "area": "Deep Bay",
+    "station": "DM2",
+    "target_column": "ph",
+    "target_name": "pH",
+    "train_start_date": "1986-02-14",
+    "train_end_date": "2024-12-15",
+    "n_observations": 448,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 9.96,
+    "floor_value": 0.0,
+    "q98_original": 8.3,
+    "best_cv_mae_logspace": 0.036147629240792095,
+    "best_cv_mape_logspace": 0.0169241807616749,
+    "best_cv_rmse_logspace": 0.046381486720053426,
+    "final_in_sample_mae": 0.2254791233618089,
+    "final_in_sample_rmse": 0.28748405133008553,
+    "final_in_sample_mape": 3.005856604324253,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.8,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 50.0,
+        "changepoint_prior_scale": 0.5
+    },
+    "trained_at": "2026-01-05 09:43:38"
+}

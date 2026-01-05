@@ -1,0 +1,26 @@
+{
+    "area": "Mirs Bay",
+    "station": "MS4",
+    "target_column": "zn",
+    "target_name": "Zn",
+    "train_start_date": "1991-07-16",
+    "train_end_date": "2024-10-30",
+    "n_observations": 69,
+    "cap_value": 132.0,
+    "floor_value": 0.0,
+    "q98_original": 110.0,
+    "fourier_order": 5,
+    "best_cv_mae": 12.909767559260796,
+    "best_cv_mape": 0.1356278107655671,
+    "best_cv_rmse": 15.137779641505627,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.8,
+        "seasonality_prior_scale": 0.5,
+        "changepoint_prior_scale": 0.01
+    },
+    "final_in_sample_mae": 7.946282070541623,
+    "final_in_sample_rmse": 10.003592614535151,
+    "final_in_sample_mape": 8.925708180607614,
+    "trained_at": "2026-01-05 07:13:39"
+}

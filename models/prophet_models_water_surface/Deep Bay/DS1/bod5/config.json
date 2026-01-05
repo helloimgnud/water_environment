@@ -1,0 +1,28 @@
+{
+    "area": "Deep Bay",
+    "station": "DS1",
+    "target_column": "bod5",
+    "target_name": "BOD\u2085",
+    "train_start_date": "1986-02-14",
+    "train_end_date": "2024-12-15",
+    "n_observations": 454,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 8.0328,
+    "floor_value": 0.0,
+    "q98_original": 6.694,
+    "best_cv_mae_logspace": 0.3486866593028051,
+    "best_cv_mape_logspace": 0.5242012680966909,
+    "best_cv_rmse_logspace": 0.4319855040801628,
+    "final_in_sample_mae": 1.1580317931792976,
+    "final_in_sample_rmse": 1.5427147539642778,
+    "final_in_sample_mape": 56.43556182776064,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.95,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 5.0,
+        "changepoint_prior_scale": 0.5
+    },
+    "trained_at": "2026-01-05 21:31:22"
+}
