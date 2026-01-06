@@ -1,0 +1,28 @@
+{
+    "area": "Port Shelter",
+    "station": "PM6",
+    "target_column": "bod5",
+    "target_name": "BOD\u2085",
+    "train_start_date": "1986-01-15",
+    "train_end_date": "2024-12-03",
+    "n_observations": 441,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 1.68,
+    "floor_value": 0.0,
+    "q98_original": 1.4,
+    "best_cv_mae_logspace": 0.178230651975846,
+    "best_cv_mape_logspace": 0.772669005120323,
+    "best_cv_rmse_logspace": 0.21992880391063543,
+    "final_in_sample_mae": 0.23893980280254623,
+    "final_in_sample_rmse": 0.3064000601313803,
+    "final_in_sample_mape": 72.41078174675297,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.9,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 10.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-06 04:40:47"
+}

@@ -1,0 +1,28 @@
+{
+    "area": "Deep Bay",
+    "station": "DS3",
+    "target_column": "nh3",
+    "target_name": "NH\u2083-N",
+    "train_start_date": "1986-02-14",
+    "train_end_date": "2024-12-15",
+    "n_observations": 448,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 0.864,
+    "floor_value": 0.0,
+    "q98_original": 0.72,
+    "best_cv_mae_logspace": 0.059891587453977595,
+    "best_cv_mape_logspace": 1.1593398022963166,
+    "best_cv_rmse_logspace": 0.07828348612890416,
+    "final_in_sample_mae": 0.13166850284466886,
+    "final_in_sample_rmse": 0.1779665871410704,
+    "final_in_sample_mape": 189.60267525227522,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.8,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 5.0,
+        "changepoint_prior_scale": 0.5
+    },
+    "trained_at": "2026-01-06 04:29:50"
+}

@@ -1,0 +1,25 @@
+{
+    "area": "Western Buffer",
+    "station": "WS2",
+    "target_column": "nhiet_do_nuoc",
+    "target_name": "Nhi\u1ec7t \u0111\u1ed9 n\u01b0\u1edbc",
+    "train_start_date": "1988-01-21",
+    "train_end_date": "2024-12-12",
+    "n_observations": 443,
+    "use_log_transform": true,
+    "fourier_order": 30,
+    "best_cv_mae_logspace": 0.042878258555631064,
+    "best_cv_mape_logspace": 0.013490872190475085,
+    "best_cv_rmse_logspace": 0.05200526898100436,
+    "final_in_sample_mae": 3.86324765512013,
+    "final_in_sample_rmse": 4.997472557056025,
+    "final_in_sample_mape": 17.56892784069587,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.95,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 5.0,
+        "changepoint_prior_scale": 0.1
+    },
+    "trained_at": "2026-01-05 22:59:12"
+}

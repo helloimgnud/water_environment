@@ -1,0 +1,28 @@
+{
+    "area": "Western Buffer",
+    "station": "WS1",
+    "target_column": "nh3",
+    "target_name": "NH\u2083-N",
+    "train_start_date": "1986-01-02",
+    "train_end_date": "2024-12-12",
+    "n_observations": 456,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 0.372,
+    "floor_value": 0.0,
+    "q98_original": 0.31,
+    "best_cv_mae_logspace": 0.046177964652424415,
+    "best_cv_mape_logspace": 0.47378559701937745,
+    "best_cv_rmse_logspace": 0.0592782216401307,
+    "final_in_sample_mae": 0.06103101546624052,
+    "final_in_sample_rmse": 0.08008229141461617,
+    "final_in_sample_mape": 112.98747401259736,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.95,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 5.0,
+        "changepoint_prior_scale": 0.5
+    },
+    "trained_at": "2026-01-06 03:03:02"
+}

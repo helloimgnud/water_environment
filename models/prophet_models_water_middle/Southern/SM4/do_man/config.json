@@ -1,0 +1,25 @@
+{
+    "area": "Southern",
+    "station": "SM4",
+    "target_column": "do_man",
+    "target_name": "DO (m\u1eb7n)",
+    "train_start_date": "1986-02-01",
+    "train_end_date": "2024-12-11",
+    "n_observations": 382,
+    "use_log_transform": true,
+    "fourier_order": 30,
+    "best_cv_mae_logspace": 0.026967478018763716,
+    "best_cv_mape_logspace": 0.007766733145184452,
+    "best_cv_rmse_logspace": 0.03331002799248433,
+    "final_in_sample_mae": 0.7807252085039733,
+    "final_in_sample_rmse": 1.0145000537377227,
+    "final_in_sample_mape": 2.502609525690016,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.9,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 20.0,
+        "changepoint_prior_scale": 0.1
+    },
+    "trained_at": "2026-01-05 21:04:44"
+}

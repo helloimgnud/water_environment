@@ -1,0 +1,28 @@
+{
+    "area": "Southern",
+    "station": "SM19",
+    "target_column": "tss",
+    "target_name": "TSS",
+    "train_start_date": "1989-12-18",
+    "train_end_date": "2024-12-11",
+    "n_observations": 360,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 9.839999999999998,
+    "floor_value": 0.0,
+    "q98_original": 8.2,
+    "best_cv_mae_logspace": 0.4828381911435116,
+    "best_cv_mape_logspace": 0.40319514453768884,
+    "best_cv_rmse_logspace": 0.6014997413041556,
+    "final_in_sample_mae": 1.2846956369512934,
+    "final_in_sample_rmse": 1.7765837052201958,
+    "final_in_sample_mape": 61.3064732814429,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.9,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 20.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-06 02:16:56"
+}

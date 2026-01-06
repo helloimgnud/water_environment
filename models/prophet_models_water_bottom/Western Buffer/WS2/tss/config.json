@@ -1,0 +1,28 @@
+{
+    "area": "Western Buffer",
+    "station": "WS2",
+    "target_column": "tss",
+    "target_name": "TSS",
+    "train_start_date": "1988-01-21",
+    "train_end_date": "2024-12-12",
+    "n_observations": 443,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 21.8293333333333,
+    "floor_value": 0.0,
+    "q98_original": 18.191111111111084,
+    "best_cv_mae_logspace": 0.5507483987347573,
+    "best_cv_mape_logspace": 0.3248939069874203,
+    "best_cv_rmse_logspace": 0.6705612649709637,
+    "final_in_sample_mae": 3.815561573508455,
+    "final_in_sample_rmse": 4.983574864434816,
+    "final_in_sample_mape": 74.91412355839985,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.8,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 5.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-06 02:32:22"
+}

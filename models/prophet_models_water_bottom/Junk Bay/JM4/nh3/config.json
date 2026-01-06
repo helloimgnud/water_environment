@@ -1,0 +1,28 @@
+{
+    "area": "Junk Bay",
+    "station": "JM4",
+    "target_column": "nh3",
+    "target_name": "NH\u2083-N",
+    "train_start_date": "1986-01-15",
+    "train_end_date": "2024-12-10",
+    "n_observations": 468,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 0.3439199999999996,
+    "floor_value": 0.0,
+    "q98_original": 0.2865999999999997,
+    "best_cv_mae_logspace": 0.022828850181767682,
+    "best_cv_mape_logspace": 0.8712826229054405,
+    "best_cv_rmse_logspace": 0.030029972781341473,
+    "final_in_sample_mae": 0.0350948261480113,
+    "final_in_sample_rmse": 0.048149032998567744,
+    "final_in_sample_mape": 104.69787152206574,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.8,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 20.0,
+        "changepoint_prior_scale": 0.1
+    },
+    "trained_at": "2026-01-06 04:24:36"
+}

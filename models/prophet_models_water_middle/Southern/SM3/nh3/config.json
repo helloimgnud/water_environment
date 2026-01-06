@@ -1,0 +1,28 @@
+{
+    "area": "Southern",
+    "station": "SM3",
+    "target_column": "nh3",
+    "target_name": "NH\u2083-N",
+    "train_start_date": "1986-02-01",
+    "train_end_date": "2024-12-12",
+    "n_observations": 383,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 0.132,
+    "floor_value": 0.0,
+    "q98_original": 0.11,
+    "best_cv_mae_logspace": 0.021067578921987525,
+    "best_cv_mape_logspace": 1.0415486056753889,
+    "best_cv_rmse_logspace": 0.027349084220428567,
+    "final_in_sample_mae": 0.018400602272525896,
+    "final_in_sample_rmse": 0.024250076845481885,
+    "final_in_sample_mape": 109.56595495327744,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.9,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 5.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-06 01:26:20"
+}

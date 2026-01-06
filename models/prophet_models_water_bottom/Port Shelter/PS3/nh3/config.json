@@ -1,0 +1,28 @@
+{
+    "area": "Port Shelter",
+    "station": "PS3",
+    "target_column": "nh3",
+    "target_name": "NH\u2083-N",
+    "train_start_date": "1986-01-03",
+    "train_end_date": "2024-12-03",
+    "n_observations": 469,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 0.10559999999999999,
+    "floor_value": 0.0,
+    "q98_original": 0.088,
+    "best_cv_mae_logspace": 0.01713063573618733,
+    "best_cv_mape_logspace": 1.0717054849637366,
+    "best_cv_rmse_logspace": 0.02237704774767992,
+    "final_in_sample_mae": 0.017376902985877123,
+    "final_in_sample_rmse": 0.024460899619156293,
+    "final_in_sample_mape": 126.60065807424026,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.9,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 50.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-06 05:11:41"
+}

@@ -1,0 +1,25 @@
+{
+    "area": "Mirs Bay",
+    "station": "MS3",
+    "target_column": "nhiet_do_nuoc",
+    "target_name": "Nhi\u1ec7t \u0111\u1ed9 n\u01b0\u1edbc",
+    "train_start_date": "1991-01-29",
+    "train_end_date": "2024-12-08",
+    "n_observations": 358,
+    "use_log_transform": true,
+    "fourier_order": 30,
+    "best_cv_mae_logspace": 0.05213089964266711,
+    "best_cv_mape_logspace": 0.016523701973591213,
+    "best_cv_rmse_logspace": 0.0678089519191992,
+    "final_in_sample_mae": 4.219540504149475,
+    "final_in_sample_rmse": 5.380847500286902,
+    "final_in_sample_mape": 19.614420098101604,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.95,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 20.0,
+        "changepoint_prior_scale": 0.01
+    },
+    "trained_at": "2026-01-06 01:53:53"
+}

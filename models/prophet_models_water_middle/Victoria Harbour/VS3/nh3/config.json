@@ -1,0 +1,28 @@
+{
+    "area": "Victoria Harbour",
+    "station": "VS3",
+    "target_column": "nh3",
+    "target_name": "NH\u2083-N",
+    "train_start_date": "1988-01-14",
+    "train_end_date": "2024-12-02",
+    "n_observations": 497,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 0.5207999999999999,
+    "floor_value": 0.0,
+    "q98_original": 0.434,
+    "best_cv_mae_logspace": 0.03464826232055531,
+    "best_cv_mape_logspace": 0.5764634058963812,
+    "best_cv_rmse_logspace": 0.044034377757608496,
+    "final_in_sample_mae": 0.05946974053146432,
+    "final_in_sample_rmse": 0.07762310826030892,
+    "final_in_sample_mape": 57.62303738951607,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.95,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 10.0,
+        "changepoint_prior_scale": 0.1
+    },
+    "trained_at": "2026-01-06 00:42:02"
+}

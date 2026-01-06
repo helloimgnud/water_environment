@@ -1,0 +1,28 @@
+{
+    "area": "North Western",
+    "station": "NM1",
+    "target_column": "tss",
+    "target_name": "TSS",
+    "train_start_date": "1988-01-21",
+    "train_end_date": "2024-12-04",
+    "n_observations": 374,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 23.448000000000025,
+    "floor_value": 0.0,
+    "q98_original": 19.54000000000002,
+    "best_cv_mae_logspace": 0.5439872824959693,
+    "best_cv_mape_logspace": 0.31088801753111966,
+    "best_cv_rmse_logspace": 0.6400596730276312,
+    "final_in_sample_mae": 3.1076289668985657,
+    "final_in_sample_rmse": 4.222865580654254,
+    "final_in_sample_mape": 55.030424227368414,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.95,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 5.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-06 02:35:52"
+}

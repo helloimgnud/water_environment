@@ -1,0 +1,25 @@
+{
+    "area": "Southern",
+    "station": "SM17",
+    "target_column": "nhiet_do_nuoc",
+    "target_name": "Nhi\u1ec7t \u0111\u1ed9 n\u01b0\u1edbc",
+    "train_start_date": "1989-12-29",
+    "train_end_date": "2024-12-13",
+    "n_observations": 355,
+    "use_log_transform": true,
+    "fourier_order": 30,
+    "best_cv_mae_logspace": 0.03849521575610302,
+    "best_cv_mape_logspace": 0.012150561975718517,
+    "best_cv_rmse_logspace": 0.04943623043767247,
+    "final_in_sample_mae": 0.8939089683193695,
+    "final_in_sample_rmse": 1.1454932691584188,
+    "final_in_sample_mape": 4.0102382419514555,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.8,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 1.0,
+        "changepoint_prior_scale": 0.01
+    },
+    "trained_at": "2026-01-05 20:44:46"
+}

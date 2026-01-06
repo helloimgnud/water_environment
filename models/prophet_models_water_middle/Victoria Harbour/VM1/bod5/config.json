@@ -1,0 +1,28 @@
+{
+    "area": "Victoria Harbour",
+    "station": "VM1",
+    "target_column": "bod5",
+    "target_name": "BOD\u2085",
+    "train_start_date": "1988-01-14",
+    "train_end_date": "2024-12-02",
+    "n_observations": 495,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 1.7999999999999998,
+    "floor_value": 0.0,
+    "q98_original": 1.5,
+    "best_cv_mae_logspace": 0.17448395035433514,
+    "best_cv_mape_logspace": 0.9962312256120456,
+    "best_cv_rmse_logspace": 0.21909191440663853,
+    "final_in_sample_mae": 0.22496822636139144,
+    "final_in_sample_rmse": 0.2920471984264833,
+    "final_in_sample_mape": 70.50061376298326,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.95,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 50.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-06 00:28:00"
+}

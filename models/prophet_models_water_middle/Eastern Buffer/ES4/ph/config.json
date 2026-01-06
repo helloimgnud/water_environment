@@ -1,0 +1,28 @@
+{
+    "area": "Eastern Buffer",
+    "station": "ES4",
+    "target_column": "ph",
+    "target_name": "pH",
+    "train_start_date": "1986-01-16",
+    "train_end_date": "2024-12-10",
+    "n_observations": 466,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 10.08,
+    "floor_value": 0.0,
+    "q98_original": 8.4,
+    "best_cv_mae_logspace": 0.0246758367815985,
+    "best_cv_mape_logspace": 0.011281129087137581,
+    "best_cv_rmse_logspace": 0.030444840234450998,
+    "final_in_sample_mae": 0.15318765826780956,
+    "final_in_sample_rmse": 0.19159228396372727,
+    "final_in_sample_mape": 1.9147959138289046,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.9,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 50.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-05 18:45:26"
+}

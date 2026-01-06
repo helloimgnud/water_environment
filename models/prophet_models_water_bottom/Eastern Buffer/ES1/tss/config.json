@@ -1,0 +1,28 @@
+{
+    "area": "Eastern Buffer",
+    "station": "ES1",
+    "target_column": "tss",
+    "target_name": "TSS",
+    "train_start_date": "1986-07-07",
+    "train_end_date": "2024-12-10",
+    "n_observations": 467,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 13.2,
+    "floor_value": 0.0,
+    "q98_original": 11.0,
+    "best_cv_mae_logspace": 0.4588514302651154,
+    "best_cv_mape_logspace": 0.3171779444934523,
+    "best_cv_rmse_logspace": 0.5607196588103697,
+    "final_in_sample_mae": 2.1475137805322655,
+    "final_in_sample_rmse": 2.8047009494577737,
+    "final_in_sample_mape": 68.99738792458405,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.9,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 5.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-06 03:00:21"
+}

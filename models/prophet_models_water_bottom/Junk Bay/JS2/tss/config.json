@@ -1,0 +1,28 @@
+{
+    "area": "Junk Bay",
+    "station": "JS2",
+    "target_column": "tss",
+    "target_name": "TSS",
+    "train_start_date": "1986-01-16",
+    "train_end_date": "2024-12-10",
+    "n_observations": 460,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 11.76,
+    "floor_value": 0.0,
+    "q98_original": 9.8,
+    "best_cv_mae_logspace": 0.41192727211754204,
+    "best_cv_mape_logspace": 0.2991824071465211,
+    "best_cv_rmse_logspace": 0.5074669132435946,
+    "final_in_sample_mae": 1.7787119572154952,
+    "final_in_sample_rmse": 2.3219989409128328,
+    "final_in_sample_mape": 55.813052137655596,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.8,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 10.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-06 04:16:12"
+}

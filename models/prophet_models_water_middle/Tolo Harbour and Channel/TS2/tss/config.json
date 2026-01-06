@@ -1,0 +1,28 @@
+{
+    "area": "Tolo Harbour and Channel",
+    "station": "TS2",
+    "target_column": "tss",
+    "target_name": "TSS",
+    "train_start_date": "1986-01-08",
+    "train_end_date": "2024-12-07",
+    "n_observations": 599,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 6.0,
+    "floor_value": 0.0,
+    "q98_original": 5.0,
+    "best_cv_mae_logspace": 0.33644704644746914,
+    "best_cv_mape_logspace": 0.3450689869696124,
+    "best_cv_rmse_logspace": 0.40974023698736683,
+    "final_in_sample_mae": 0.8095315904279178,
+    "final_in_sample_rmse": 1.0475721300193674,
+    "final_in_sample_mape": 50.91321456142498,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.9,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 20.0,
+        "changepoint_prior_scale": 0.5
+    },
+    "trained_at": "2026-01-06 00:02:09"
+}

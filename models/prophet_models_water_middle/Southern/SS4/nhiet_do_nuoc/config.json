@@ -1,0 +1,25 @@
+{
+    "area": "Southern",
+    "station": "SS4",
+    "target_column": "nhiet_do_nuoc",
+    "target_name": "Nhi\u1ec7t \u0111\u1ed9 n\u01b0\u1edbc",
+    "train_start_date": "1986-02-01",
+    "train_end_date": "2024-12-11",
+    "n_observations": 387,
+    "use_log_transform": true,
+    "fourier_order": 30,
+    "best_cv_mae_logspace": 0.03499523398629553,
+    "best_cv_mape_logspace": 0.01094836350907354,
+    "best_cv_rmse_logspace": 0.0458716535825551,
+    "final_in_sample_mae": 5.11350907012963,
+    "final_in_sample_rmse": 6.286014946316723,
+    "final_in_sample_mape": 22.758930755170123,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.95,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 20.0,
+        "changepoint_prior_scale": 0.1
+    },
+    "trained_at": "2026-01-05 21:28:43"
+}

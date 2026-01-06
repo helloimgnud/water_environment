@@ -1,0 +1,25 @@
+{
+    "area": "Junk Bay",
+    "station": "JM4",
+    "target_column": "do_man",
+    "target_name": "DO (m\u1eb7n)",
+    "train_start_date": "1986-07-07",
+    "train_end_date": "2024-12-10",
+    "n_observations": 462,
+    "use_log_transform": true,
+    "fourier_order": 30,
+    "best_cv_mae_logspace": 0.020608575433152195,
+    "best_cv_mape_logspace": 0.0058580850238295,
+    "best_cv_rmse_logspace": 0.024578975609759215,
+    "final_in_sample_mae": 0.6135309114169751,
+    "final_in_sample_rmse": 0.770141313148494,
+    "final_in_sample_mape": 1.8929752499056742,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.8,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 1.0,
+        "changepoint_prior_scale": 0.1
+    },
+    "trained_at": "2026-01-05 18:01:45"
+}

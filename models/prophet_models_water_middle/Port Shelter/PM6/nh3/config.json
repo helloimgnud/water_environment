@@ -1,0 +1,28 @@
+{
+    "area": "Port Shelter",
+    "station": "PM6",
+    "target_column": "nh3",
+    "target_name": "NH\u2083-N",
+    "train_start_date": "1986-01-15",
+    "train_end_date": "2024-12-03",
+    "n_observations": 441,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 0.14591999999999988,
+    "floor_value": 0.0,
+    "q98_original": 0.1215999999999999,
+    "best_cv_mae_logspace": 0.01788032216818349,
+    "best_cv_mape_logspace": 0.880246935977344,
+    "best_cv_rmse_logspace": 0.023836624851871418,
+    "final_in_sample_mae": 0.01807357263240248,
+    "final_in_sample_rmse": 0.025347350062751697,
+    "final_in_sample_mape": 113.42100951889225,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.95,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 10.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-06 05:04:25"
+}

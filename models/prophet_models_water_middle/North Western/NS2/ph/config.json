@@ -1,0 +1,28 @@
+{
+    "area": "North Western",
+    "station": "NS2",
+    "target_column": "ph",
+    "target_name": "pH",
+    "train_start_date": "1986-01-30",
+    "train_end_date": "2024-12-04",
+    "n_observations": 329,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 10.034957837837839,
+    "floor_value": 0.0,
+    "q98_original": 8.362464864864865,
+    "best_cv_mae_logspace": 0.027696210139085395,
+    "best_cv_mape_logspace": 0.01274102343573186,
+    "best_cv_rmse_logspace": 0.035498758825518235,
+    "final_in_sample_mae": 0.17578581019616626,
+    "final_in_sample_rmse": 0.21830651846284116,
+    "final_in_sample_mape": 2.2289297839464974,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.8,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 5.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-05 20:58:27"
+}

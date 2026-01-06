@@ -1,0 +1,25 @@
+{
+    "area": "Junk Bay",
+    "station": "JM4",
+    "target_column": "nhiet_do_nuoc",
+    "target_name": "Nhi\u1ec7t \u0111\u1ed9 n\u01b0\u1edbc",
+    "train_start_date": "1986-01-15",
+    "train_end_date": "2024-12-10",
+    "n_observations": 468,
+    "use_log_transform": true,
+    "fourier_order": 30,
+    "best_cv_mae_logspace": 0.04568772635888418,
+    "best_cv_mape_logspace": 0.014570401240433038,
+    "best_cv_rmse_logspace": 0.059354498760537736,
+    "final_in_sample_mae": 0.9427023765671224,
+    "final_in_sample_rmse": 1.2517015132008875,
+    "final_in_sample_mape": 4.290019120816417,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.9,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 10.0,
+        "changepoint_prior_scale": 0.1
+    },
+    "trained_at": "2026-01-06 02:22:25"
+}

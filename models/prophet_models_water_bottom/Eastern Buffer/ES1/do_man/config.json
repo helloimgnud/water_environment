@@ -1,0 +1,25 @@
+{
+    "area": "Eastern Buffer",
+    "station": "ES1",
+    "target_column": "do_man",
+    "target_name": "DO (m\u1eb7n)",
+    "train_start_date": "1986-07-07",
+    "train_end_date": "2024-12-10",
+    "n_observations": 467,
+    "use_log_transform": true,
+    "fourier_order": 30,
+    "best_cv_mae_logspace": 0.020494486544742046,
+    "best_cv_mape_logspace": 0.005807218259593854,
+    "best_cv_rmse_logspace": 0.024848372017920967,
+    "final_in_sample_mae": 0.8098984880183253,
+    "final_in_sample_rmse": 0.9808545793568418,
+    "final_in_sample_mape": 2.4575433879483706,
+    "best_params": {
+        "n_changepoints": 25,
+        "changepoint_range": 0.8,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 5.0,
+        "changepoint_prior_scale": 0.1
+    },
+    "trained_at": "2026-01-06 01:32:25"
+}

@@ -1,0 +1,28 @@
+{
+    "area": "Western Buffer",
+    "station": "WM2",
+    "target_column": "ph",
+    "target_name": "pH",
+    "train_start_date": "1988-01-21",
+    "train_end_date": "2024-12-12",
+    "n_observations": 444,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 9.96,
+    "floor_value": 0.0,
+    "q98_original": 8.3,
+    "best_cv_mae_logspace": 0.014846241515867272,
+    "best_cv_mape_logspace": 0.006780822270392973,
+    "best_cv_rmse_logspace": 0.01898836618882998,
+    "final_in_sample_mae": 0.10271476662938815,
+    "final_in_sample_rmse": 0.1280572126634883,
+    "final_in_sample_mape": 1.2841523113336248,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.9,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 5.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-06 03:31:49"
+}

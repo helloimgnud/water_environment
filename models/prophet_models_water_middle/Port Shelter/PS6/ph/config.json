@@ -1,0 +1,28 @@
+{
+    "area": "Port Shelter",
+    "station": "PS6",
+    "target_column": "ph",
+    "target_name": "pH",
+    "train_start_date": "1986-01-03",
+    "train_end_date": "2024-12-03",
+    "n_observations": 468,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 10.26642580645161,
+    "floor_value": 0.0,
+    "q98_original": 8.555354838709675,
+    "best_cv_mae_logspace": 0.021046673083664542,
+    "best_cv_mape_logspace": 0.009562033941022117,
+    "best_cv_rmse_logspace": 0.02554146004538539,
+    "final_in_sample_mae": 0.14809609117391315,
+    "final_in_sample_rmse": 0.18923177369546243,
+    "final_in_sample_mape": 1.8278895436500366,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.8,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 20.0,
+        "changepoint_prior_scale": 0.05
+    },
+    "trained_at": "2026-01-05 22:08:42"
+}

@@ -1,0 +1,25 @@
+{
+    "area": "Victoria Harbour",
+    "station": "VS10",
+    "target_column": "do_man",
+    "target_name": "DO (m\u1eb7n)",
+    "train_start_date": "1986-01-02",
+    "train_end_date": "2024-12-06",
+    "n_observations": 538,
+    "use_log_transform": true,
+    "fourier_order": 30,
+    "best_cv_mae_logspace": 0.044457893664799554,
+    "best_cv_mape_logspace": 0.013156107948271318,
+    "best_cv_rmse_logspace": 0.055364103336374426,
+    "final_in_sample_mae": 1.2079779872156478,
+    "final_in_sample_rmse": 1.652024356065353,
+    "final_in_sample_mape": 4.2550700403775465,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.9,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 10.0,
+        "changepoint_prior_scale": 0.01
+    },
+    "trained_at": "2026-01-05 22:21:44"
+}

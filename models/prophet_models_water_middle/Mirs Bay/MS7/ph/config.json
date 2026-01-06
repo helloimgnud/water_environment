@@ -1,0 +1,28 @@
+{
+    "area": "Mirs Bay",
+    "station": "MS7",
+    "target_column": "ph",
+    "target_name": "pH",
+    "train_start_date": "1991-01-29",
+    "train_end_date": "2024-12-08",
+    "n_observations": 358,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 10.2,
+    "floor_value": 0.0,
+    "q98_original": 8.5,
+    "best_cv_mae_logspace": 0.01841513336302569,
+    "best_cv_mape_logspace": 0.008385733951665326,
+    "best_cv_rmse_logspace": 0.022643991327814497,
+    "final_in_sample_mae": 0.16421209127667136,
+    "final_in_sample_rmse": 0.33462386148986006,
+    "final_in_sample_mape": 2.0274612977994697,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.9,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 5.0,
+        "changepoint_prior_scale": 0.5
+    },
+    "trained_at": "2026-01-05 20:33:09"
+}

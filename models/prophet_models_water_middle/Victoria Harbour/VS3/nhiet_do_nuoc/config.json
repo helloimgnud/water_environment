@@ -1,0 +1,25 @@
+{
+    "area": "Victoria Harbour",
+    "station": "VS3",
+    "target_column": "nhiet_do_nuoc",
+    "target_name": "Nhi\u1ec7t \u0111\u1ed9 n\u01b0\u1edbc",
+    "train_start_date": "1988-01-14",
+    "train_end_date": "2024-12-02",
+    "n_observations": 497,
+    "use_log_transform": true,
+    "fourier_order": 30,
+    "best_cv_mae_logspace": 0.03977354450457432,
+    "best_cv_mape_logspace": 0.012605270402230638,
+    "best_cv_rmse_logspace": 0.050630503934500394,
+    "final_in_sample_mae": 1.5902740808591296,
+    "final_in_sample_rmse": 2.031860980310101,
+    "final_in_sample_mape": 7.149293120352709,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.9,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 1.0,
+        "changepoint_prior_scale": 0.01
+    },
+    "trained_at": "2026-01-05 22:27:06"
+}

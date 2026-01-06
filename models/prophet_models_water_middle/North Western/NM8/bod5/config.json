@@ -1,0 +1,28 @@
+{
+    "area": "North Western",
+    "station": "NM8",
+    "target_column": "bod5",
+    "target_name": "BOD\u2085",
+    "train_start_date": "1999-03-15",
+    "train_end_date": "2024-12-04",
+    "n_observations": 304,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 2.04,
+    "floor_value": 0.0,
+    "q98_original": 1.7,
+    "best_cv_mae_logspace": 0.21420701703747302,
+    "best_cv_mape_logspace": 0.9725425631072956,
+    "best_cv_rmse_logspace": 0.27455778197835107,
+    "final_in_sample_mae": 0.2590379951824784,
+    "final_in_sample_rmse": 0.3395668452883129,
+    "final_in_sample_mape": 83.04259783955018,
+    "best_params": {
+        "n_changepoints": 10,
+        "changepoint_range": 0.95,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 50.0,
+        "changepoint_prior_scale": 0.1
+    },
+    "trained_at": "2026-01-06 02:22:40"
+}

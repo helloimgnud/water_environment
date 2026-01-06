@@ -1,0 +1,25 @@
+{
+    "area": "Western Buffer",
+    "station": "WS2",
+    "target_column": "do_man",
+    "target_name": "DO (m\u1eb7n)",
+    "train_start_date": "1988-01-21",
+    "train_end_date": "2024-12-12",
+    "n_observations": 443,
+    "use_log_transform": true,
+    "fourier_order": 30,
+    "best_cv_mae_logspace": 0.02129795229886204,
+    "best_cv_mape_logspace": 0.006049737413020776,
+    "best_cv_rmse_logspace": 0.026129723451209137,
+    "final_in_sample_mae": 0.7403845507258688,
+    "final_in_sample_rmse": 0.9193527125083973,
+    "final_in_sample_mape": 2.273396035572839,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.8,
+        "seasonality_mode": "additive",
+        "seasonality_prior_scale": 5.0,
+        "changepoint_prior_scale": 0.1
+    },
+    "trained_at": "2026-01-05 22:59:59"
+}

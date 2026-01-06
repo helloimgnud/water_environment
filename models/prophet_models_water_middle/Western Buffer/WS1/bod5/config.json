@@ -1,0 +1,28 @@
+{
+    "area": "Western Buffer",
+    "station": "WS1",
+    "target_column": "bod5",
+    "target_name": "BOD\u2085",
+    "train_start_date": "1986-01-02",
+    "train_end_date": "2024-12-12",
+    "n_observations": 456,
+    "use_log_transform": true,
+    "fourier_order": 35,
+    "cap_value": 1.56,
+    "floor_value": 0.0,
+    "q98_original": 1.3,
+    "best_cv_mae_logspace": 0.15859990303158766,
+    "best_cv_mape_logspace": 0.854310531003179,
+    "best_cv_rmse_logspace": 0.1962095319611773,
+    "final_in_sample_mae": 0.2370754482500123,
+    "final_in_sample_rmse": 0.3008841098309169,
+    "final_in_sample_mape": 80.38102106882883,
+    "best_params": {
+        "n_changepoints": 50,
+        "changepoint_range": 0.8,
+        "seasonality_mode": "multiplicative",
+        "seasonality_prior_scale": 50.0,
+        "changepoint_prior_scale": 0.5
+    },
+    "trained_at": "2026-01-06 02:58:12"
+}
