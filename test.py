@@ -2,12 +2,13 @@ import os
 import json
 from prophet.serialize import model_from_json
 import pandas as pd
+import numpy as np  # ← THÊM IMPORT NÀY ĐỂ DÙNG np.expm1
 
 # ===============================
 # CẤU HÌNH ĐƯỜNG DẪN
 # ===============================
-FOLDER_PATH = "/home/duongnt/auto-hdr/test/prophet_models_sediment/Deep Bay/DS1"
-OUTPUT_CSV = "/home/duongnt/auto-hdr/test/forecast_summary_DS1.csv"
+FOLDER_PATH = "D:\water_environment\models\prophet_models_water_surface\Deep Bay\DM2"
+OUTPUT_CSV = "forecast_summary_DS1.csv"
 
 # ===============================
 # TÌM TẤT CẢ SUBFOLDER (CỘT)
@@ -20,7 +21,7 @@ subfolders = [
 if not subfolders:
     raise ValueError(f"Không tìm thấy subfolder nào trong {FOLDER_PATH}")
 
-print(f" Tìm thấy {len(subfolders)} chỉ tiêu: {', '.join(subfolders)}")
+print(f" Tìm thấy {len(subfolders)} chỉ tiêu: {', '.join(sorted(subfolders))}")
 
 # ===============================
 # DỰ BÁO VÀ TỔNG HỢP
@@ -33,7 +34,7 @@ for element in sorted(subfolders):
     config_path = os.path.join(model_dir, "config.json")
 
     if not (os.path.exists(model_path) and os.path.exists(config_path)):
-        print(f" Bỏ qua {element}: Thiếu file model hoặc config")
+        print(f" Bỏ qua {element.upper()}: Thiếu file model hoặc config")
         continue
 
     print(f"\n Load model cho {element.upper()}")
@@ -65,8 +66,12 @@ for element in sorted(subfolders):
     # LẤY 12 THÁNG TƯƠNG LAI – CHỈ GIỮ yhat
     # ===============================
     future_forecast = forecast.tail(12)[["ds", "yhat"]].copy()
-    future_forecast["element"] = element.lower()
 
+    # === BƯỚC QUAN TRỌNG: LUÔN ÁP DỤNG INVERSE LOG TRANSFORM ===
+    future_forecast["yhat"] = np.expm1(future_forecast["yhat"])
+    print(f"   → Đã áp dụng np.expm1() để chuyển yhat về scale gốc")
+
+    future_forecast["element"] = element.lower()
     forecast_dfs.append(future_forecast)
 
 # ===============================
@@ -90,27 +95,32 @@ df_summary.reset_index(inplace=True)
 # ===============================
 # XỬ LÝ THỜI GIAN
 # ===============================
-# Đổi tên ds → thoi_gian
 df_summary.rename(columns={"ds": "thoi_gian"}, inplace=True)
 
-# Gán ngày cố định là 28
+# Gán ngày cố định là 28 của tháng
 df_summary["thoi_gian"] = (
     pd.to_datetime(df_summary["thoi_gian"])
     .dt.to_period("M")
     .dt.to_timestamp()
-    + pd.offsets.Day(27)
+    + pd.offsets.Day(27)  # ngày 1 + 27 = ngày 28
 )
 
 # Format YYYY-MM-DD
 df_summary["thoi_gian"] = df_summary["thoi_gian"].dt.strftime("%Y-%m-%d")
 
-print("\n DataFrame tổng hợp:")
-print(df_summary.head())
+# Sắp xếp cột: thoi_gian đầu tiên, các chỉ tiêu theo alphabet
+cols = ["thoi_gian"] + sorted([col for col in df_summary.columns if col != "thoi_gian"])
+df_summary = df_summary[cols]
+
+print("\n" + "="*80)
+print(" DỰ BÁO HOÀN TẤT - ĐÃ ÁP DỤNG INVERSE LOG TRANSFORM CHO TẤT CẢ CHỈ TIÊU")
+print("="*80)
+print(df_summary.head(12).round(4))  # In toàn bộ 12 tháng, làm tròn dễ đọc
+print("="*80)
 
 # ===============================
 # LƯU CSV
 # ===============================
 df_summary.to_csv(OUTPUT_CSV, index=False, encoding="utf-8-sig")
-
 print(f"\n Đã lưu CSV tại: {OUTPUT_CSV}")
 print(" Hoàn tất!")

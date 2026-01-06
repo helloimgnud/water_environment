@@ -2,6 +2,7 @@ import os
 import json
 from prophet.serialize import model_from_json
 import pandas as pd
+import numpy as np  # ← THÊM IMPORT NÀY
 
 def get_forecast_df(type_indicator, area, station):
     """
@@ -13,9 +14,9 @@ def get_forecast_df(type_indicator, area, station):
         station (str): Tên trạm (tên folder trạm)
     
     Returns:
-        pd.DataFrame: DataFrame chứa dự báo, với cột 'thoi_gian' và các cột chỉ tiêu (giá trị yhat).
+        pd.DataFrame: DataFrame chứa dự báo, với cột 'thoi_gian' và các cột chỉ tiêu (giá trị yhat đã inverse nếu cần).
     """
-    BASE_DIR = r"../models" # thay base_dir
+    BASE_DIR = r"../models"  # thay base_dir nếu cần
     
     # Xác định thư mục gốc dựa trên type_indicator
     if type_indicator == 'Sediment':
@@ -32,6 +33,11 @@ def get_forecast_df(type_indicator, area, station):
         raise FileNotFoundError(f"Không tìm thấy folder trạm: {FOLDER_PATH}")
     
     print(f" Đang xử lý: {type_indicator} | Khu vực: {area} | Trạm: {station}")
+    
+    # Xác định có cần inverse log transform không
+    requires_inverse_log = type_indicator in ['Water_Surface', 'Water_Middle', 'Water_Bottom']
+    transform_note = " (sẽ áp dụng expm1)" if requires_inverse_log else " (scale gốc)"
+    print(f"   → Chế độ dự báo:{transform_note}")
     
     # Tìm tất cả subfolder (các chỉ tiêu)
     subfolders = [f for f in os.listdir(FOLDER_PATH) if os.path.isdir(os.path.join(FOLDER_PATH, f))]
@@ -69,15 +75,26 @@ def get_forecast_df(type_indicator, area, station):
         if cap_value is not None:
             future["cap"] = cap_value
             future["floor"] = floor_value
-            print(f"   → {element.upper():<12} | Logistic (cap={cap_value:.4f})")
+            growth_type = "Logistic"
         else:
-            print(f"   → {element.upper():<12} | Linear growth")
+            growth_type = "Linear"
+        
+        print(f"   → {element.upper():<12} | {growth_type} growth", end="")
+        if requires_inverse_log:
+            print(" → expm1 sẽ được áp dụng")
+        else:
+            print("")
         
         forecast = model.predict(future)
         
-        # Lấy 12 tháng tương lai – chỉ giữ yhat
+        # Lấy 12 tháng tương lai
         future_forecast = forecast.tail(12)[["ds", "yhat"]].copy()
-        future_forecast["element"] = element.lower()  # hoặc .upper() tùy sở thích
+        
+        # === QUAN TRỌNG: INVERSE LOG TRANSFORM NẾU LÀ WATER ===
+        if requires_inverse_log:
+            future_forecast["yhat"] = np.expm1(future_forecast["yhat"])
+        
+        future_forecast["element"] = element.lower()
         forecast_dfs.append(future_forecast)
     
     if not forecast_dfs:
@@ -93,12 +110,12 @@ def get_forecast_df(type_indicator, area, station):
     df_summary.reset_index(inplace=True)
     df_summary.rename(columns={"ds": "thoi_gian"}, inplace=True)
     
-    # Chuyển thành ngày 28 của tháng (từ ngày 1 của tháng tiếp theo trừ đi 4 ngày → ngày 28)
+    # Chuyển thành ngày 28 của tháng
     df_summary["thoi_gian"] = (
         pd.to_datetime(df_summary["thoi_gian"])
         .dt.to_period("M")
         .dt.to_timestamp()
-        + pd.offsets.Day(27)  # ngày 1 + 27 ngày = ngày 28
+        + pd.offsets.Day(27)  # ngày 28
     )
     df_summary["thoi_gian"] = df_summary["thoi_gian"].dt.strftime("%Y-%m-%d")
     
@@ -113,8 +130,8 @@ def get_forecast_df(type_indicator, area, station):
 # HÀM MAIN ĐỂ TEST
 # ===============================
 def main():
-    # Ví dụ test – bạn chỉ cần thay đổi 3 tham số này
-    type_indicator = "Water_Surface"   # Sediment / Water_Surface / Water_Middle / Water_Bottom
+    # Ví dụ test – thay đổi 3 tham số này để thử
+    type_indicator = "Water_Surface"   # Thử đổi thành "Sediment" để thấy khác biệt
     area           = "Deep Bay"
     station        = "DM2"
     
@@ -125,19 +142,22 @@ def main():
         print(" DỰ BÁO THÀNH CÔNG!")
         print(f"   Trạm: {station} ({type_indicator} - {area})")
         print(f"   Dự báo 12 tháng tương lai (ngày 28 hàng tháng)")
+        if type_indicator in ['Water_Surface', 'Water_Middle', 'Water_Bottom']:
+            print("   → Đã áp dụng inverse log transform (expm1)")
+        else:
+            print("   → Dự báo trên scale gốc (không transform)")
         print("="*80)
-        print(df)
+        print(df.round(3))  # Làm tròn để dễ đọc
         print("="*80)
         
-        # Lưu CSV nếu muốn
-        output_csv = "forecast_{type_indicator}_{area}_{station}.csv"
-        df.to_csv(output_csv, index=False, encoding="utf-8-sig", date_format="%Y-%m-%d")
+        # Lưu CSV
+        output_csv = f"forecast_{type_indicator}_{area}_{station}.csv"
+        df.to_csv(output_csv, index=False, encoding="utf-8-sig")
         print(f" Đã lưu CSV tại: {output_csv}")
         
     except Exception as e:
         print(f" Lỗi: {e}")
 
 
-# Chạy test
 if __name__ == "__main__":
     main()
