@@ -108,7 +108,7 @@ function App() {
                         <div className="stat-card good">
                             <h3>Good Status</h3>
                             <div className="stat-value">{eaiData.status_distribution.good || 0}</div>
-                            <div className="stat-label">EAI >= 80</div>
+                            <div className="stat-label">EAI ≥ 80</div>
                         </div>
                         <div className="stat-card warning">
                             <h3>Warning Status</h3>
@@ -118,7 +118,7 @@ function App() {
                         <div className="stat-card bad">
                             <h3>Bad Status</h3>
                             <div className="stat-value">{eaiData.status_distribution.bad || 0}</div>
-                            <div className="stat-label">EAI &lt; 50</div>
+                            <div className="stat-label">{"EAI < 50"}</div>
                         </div>
                         <div className="stat-card">
                             <h3>Total Samples</h3>

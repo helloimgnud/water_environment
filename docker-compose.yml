@@ -13,6 +13,8 @@ services:
       - MONGO_DB=${MONGO_DB:-marine_environment}
     env_file:
       - .env
+    volumes:
+      - ./models:/app/models
     restart: unless-stopped
     networks:
       - eai-network

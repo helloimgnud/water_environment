@@ -15,7 +15,10 @@ def get_forecast_df(type_indicator, area, station):
     Returns:
         pd.DataFrame: DataFrame chứa dự báo, với cột 'thoi_gian' và các cột chỉ tiêu (giá trị yhat).
     """
-    BASE_DIR = r"../models" # thay base_dir
+    # Check Docker path first, then fallback to relative path
+    _docker_path = "/app/models"
+    _dev_path = os.path.join(os.path.dirname(__file__), "..", "models")
+    BASE_DIR = _docker_path if os.path.exists(_docker_path) else _dev_path
     
     # Xác định thư mục gốc dựa trên type_indicator
     if type_indicator == 'Sediment':

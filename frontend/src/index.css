@@ -662,9 +662,57 @@ body {
   border-color: var(--accent);
 }
 
-.calculate-btn {
-  width: 100%;
+.param-input.filled input {
+  border-color: var(--accent);
+  background: rgba(59, 130, 246, 0.1);
 }
+
+.param-category {
+  margin-bottom: 1.5rem;
+}
+
+.category-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-header h3 {
+  margin: 0;
+}
+
+.input-count {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.button-group .btn {
+  flex: 1;
+}
+
+.calculate-btn {
+  flex: 2 !important;
+}
+
 
 .result-card {
   margin-top: 1.5rem;
@@ -1040,4 +1088,76 @@ body {
 
 .placeholder-message strong {
   color: #a78bfa;
+}
+
+/* Prediction Chart Section */
+.prediction-chart-section {
+  margin-bottom: 2rem;
+}
+
+.prediction-chart-container {
+  height: 350px;
+  position: relative;
+}
+
+.prediction-badge {
+  font-size: 0.8rem;
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.15);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  margin-left: 0.75rem;
+  font-weight: 500;
+}
+
+.prediction-legend {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.legend-color {
+  width: 24px;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.legend-color.historical {
+  background: #3b82f6;
+}
+
+.legend-color.predicted {
+  background: #f59e0b;
+  background: repeating-linear-gradient(90deg,
+      #f59e0b 0px,
+      #f59e0b 5px,
+      transparent 5px,
+      transparent 10px);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border-radius: 1rem;
+  border: 1px dashed var(--border-color);
+}
+
+.control-group select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }

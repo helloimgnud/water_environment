@@ -20,7 +20,7 @@ subfolders = [
 if not subfolders:
     raise ValueError(f"Không tìm thấy subfolder nào trong {FOLDER_PATH}")
 
-print(f"🔍 Tìm thấy {len(subfolders)} chỉ tiêu: {', '.join(subfolders)}")
+print(f" Tìm thấy {len(subfolders)} chỉ tiêu: {', '.join(subfolders)}")
 
 # ===============================
 # DỰ BÁO VÀ TỔNG HỢP
@@ -33,10 +33,10 @@ for element in sorted(subfolders):
     config_path = os.path.join(model_dir, "config.json")
 
     if not (os.path.exists(model_path) and os.path.exists(config_path)):
-        print(f"⚠️ Bỏ qua {element}: Thiếu file model hoặc config")
+        print(f" Bỏ qua {element}: Thiếu file model hoặc config")
         continue
 
-    print(f"\n🔬 Load model cho {element.upper()}")
+    print(f"\n Load model cho {element.upper()}")
 
     # Load config
     with open(config_path, "r", encoding="utf-8") as f:
@@ -104,7 +104,7 @@ df_summary["thoi_gian"] = (
 # Format YYYY-MM-DD
 df_summary["thoi_gian"] = df_summary["thoi_gian"].dt.strftime("%Y-%m-%d")
 
-print("\n📊 DataFrame tổng hợp:")
+print("\n DataFrame tổng hợp:")
 print(df_summary.head())
 
 # ===============================
@@ -112,5 +112,5 @@ print(df_summary.head())
 # ===============================
 df_summary.to_csv(OUTPUT_CSV, index=False, encoding="utf-8-sig")
 
-print(f"\n✅ Đã lưu CSV tại: {OUTPUT_CSV}")
-print("🎉 Hoàn tất!")
+print(f"\n Đã lưu CSV tại: {OUTPUT_CSV}")
+print(" Hoàn tất!")

@@ -1,59 +1,65 @@
 import { useState } from 'react';
+import api from '../api';
 
-// Parameter definitions for each sample type
-const WATER_QUALITY_PARAMS = [
-    { id: 'ph', label: 'pH', min: 0, max: 14, step: 0.1, unit: '' },
-    { id: 'do_man', label: 'Salinity (do_man)', min: 0, max: 40, step: 0.1, unit: 'ppt' },
-    { id: 'nhiet_do_nuoc', label: 'Water Temperature', min: 0, max: 40, step: 0.1, unit: '°C' },
-    { id: 'nh3', label: 'Ammonia (NH3)', min: 0, max: 10, step: 0.01, unit: 'mg/L' },
-    { id: 'tss', label: 'TSS', min: 0, max: 200, step: 1, unit: 'mg/L' },
-    { id: 'bod5', label: 'BOD5', min: 0, max: 20, step: 0.1, unit: 'mg/L' },
-];
-
-const SEDIMENT_PARAMS = [
-    { id: 'as', label: 'Arsenic (As)', min: 0, max: 50, step: 0.1, unit: 'mg/kg' },
-    { id: 'cd', label: 'Cadmium (Cd)', min: 0, max: 5, step: 0.01, unit: 'mg/kg' },
-    { id: 'pb', label: 'Lead (Pb)', min: 0, max: 100, step: 0.1, unit: 'mg/kg' },
-    { id: 'cu', label: 'Copper (Cu)', min: 0, max: 150, step: 0.1, unit: 'mg/kg' },
-    { id: 'zn', label: 'Zinc (Zn)', min: 0, max: 400, step: 1, unit: 'mg/kg' },
-];
+// All parameter definitions - shown together
+const ALL_PARAMS = {
+    waterQuality: [
+        { id: 'ph', label: 'pH', min: 0, max: 14, step: 0.1, unit: '' },
+        { id: 'do_man', label: 'Salinity', min: 0, max: 40, step: 0.1, unit: 'ppt' },
+        { id: 'nhiet_do_nuoc', label: 'Water Temp', min: 0, max: 40, step: 0.1, unit: '°C' },
+        { id: 'nh3', label: 'NH₃', min: 0, max: 10, step: 0.01, unit: 'mg/L' },
+        { id: 'tss', label: 'TSS', min: 0, max: 200, step: 1, unit: 'mg/L' },
+        { id: 'bod5', label: 'BOD₅', min: 0, max: 20, step: 0.1, unit: 'mg/L' },
+    ],
+    sediment: [
+        { id: 'as', label: 'Arsenic (As)', min: 0, max: 50, step: 0.1, unit: 'mg/kg' },
+        { id: 'cd', label: 'Cadmium (Cd)', min: 0, max: 5, step: 0.01, unit: 'mg/kg' },
+        { id: 'pb', label: 'Lead (Pb)', min: 0, max: 100, step: 0.1, unit: 'mg/kg' },
+        { id: 'cu', label: 'Copper (Cu)', min: 0, max: 150, step: 0.1, unit: 'mg/kg' },
+        { id: 'zn', label: 'Zinc (Zn)', min: 0, max: 400, step: 1, unit: 'mg/kg' },
+    ]
+};
 
 function CalculatorPage() {
-    const [sampleType, setSampleType] = useState('WATER_QUALITY');
     const [inputValues, setInputValues] = useState({});
     const [result, setResult] = useState(null);
     const [loading, setLoading] = useState(false);
     const [csvFile, setCsvFile] = useState(null);
     const [csvResults, setCsvResults] = useState(null);
 
-    const params = sampleType === 'WATER_QUALITY' ? WATER_QUALITY_PARAMS : SEDIMENT_PARAMS;
-
     const handleInputChange = (paramId, value) => {
-        setInputValues({ ...inputValues, [paramId]: value });
+        if (value === '' || isNaN(value)) {
+            // Remove the key if empty
+            const newValues = { ...inputValues };
+            delete newValues[paramId];
+            setInputValues(newValues);
+        } else {
+            setInputValues({ ...inputValues, [paramId]: parseFloat(value) });
+        }
     };
 
-    const handleSampleTypeChange = (type) => {
-        setSampleType(type);
+    const clearAllInputs = () => {
         setInputValues({});
         setResult(null);
     };
 
     const calculateEAI = async () => {
+        // Check if at least one input has a value
+        if (Object.keys(inputValues).length === 0) {
+            setResult({ error: 'Please enter at least one parameter value.' });
+            return;
+        }
+
         setLoading(true);
         try {
-            const response = await fetch('http://localhost:8000/calculate-eai', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    sample_type: sampleType,
-                    data: inputValues
-                })
+            const response = await api.post('/calculate-eai', {
+                sample_type: 'MIXED',
+                data: inputValues
             });
-            const data = await response.json();
-            setResult(data);
+            setResult(response.data);
         } catch (error) {
             console.error('Error calculating EAI:', error);
-            setResult({ error: 'Failed to calculate EAI. Make sure all required fields are filled.' });
+            setResult({ error: 'Failed to calculate EAI. Please check your connection.' });
         } finally {
             setLoading(false);
         }
@@ -74,14 +80,12 @@ function CalculatorPage() {
         try {
             const formData = new FormData();
             formData.append('file', csvFile);
-            formData.append('sample_type', sampleType);
+            formData.append('sample_type', 'MIXED');
 
-            const response = await fetch('http://localhost:8000/calculate-eai-csv', {
-                method: 'POST',
-                body: formData
+            const response = await api.post('/calculate-eai-csv', formData, {
+                headers: { 'Content-Type': 'multipart/form-data' }
             });
-            const data = await response.json();
-            setCsvResults(data);
+            setCsvResults(response.data);
         } catch (error) {
             console.error('Error processing CSV:', error);
             setCsvResults({ error: 'Failed to process CSV file.' });
@@ -97,60 +101,90 @@ function CalculatorPage() {
         return '';
     };
 
+    const filledCount = Object.keys(inputValues).length;
+    const totalParams = ALL_PARAMS.waterQuality.length + ALL_PARAMS.sediment.length;
+
     return (
         <div className="calculator-page">
             <div className="calculator-header">
                 <h2>EAI Calculator</h2>
-                <p>Enter environmental parameters manually or upload a CSV file to calculate the Environmental Alert Index.</p>
-            </div>
-
-            {/* Sample Type Selection */}
-            <div className="sample-type-selector">
-                <button
-                    className={`type-btn ${sampleType === 'WATER_QUALITY' ? 'active' : ''}`}
-                    onClick={() => handleSampleTypeChange('WATER_QUALITY')}
-                >
-                    Water Quality
-                </button>
-                <button
-                    className={`type-btn ${sampleType === 'SEDIMENT' ? 'active' : ''}`}
-                    onClick={() => handleSampleTypeChange('SEDIMENT')}
-                >
-                    Sediment
-                </button>
+                <p>Enter any environmental parameters to calculate the Environmental Alert Index. Only filled fields will be used in the calculation.</p>
             </div>
 
             <div className="calculator-content">
                 {/* Manual Input Section */}
                 <div className="input-section">
-                    <h3>Manual Input</h3>
-                    <div className="param-grid">
-                        {params.map((param) => (
-                            <div key={param.id} className="param-input">
-                                <label htmlFor={param.id}>
-                                    {param.label}
-                                    {param.unit && <span className="unit">({param.unit})</span>}
-                                </label>
-                                <input
-                                    type="number"
-                                    id={param.id}
-                                    min={param.min}
-                                    max={param.max}
-                                    step={param.step}
-                                    value={inputValues[param.id] || ''}
-                                    onChange={(e) => handleInputChange(param.id, parseFloat(e.target.value))}
-                                    placeholder={`${param.min} - ${param.max}`}
-                                />
-                            </div>
-                        ))}
+                    <div className="section-header">
+                        <h3>Manual Input</h3>
+                        <span className="input-count">{filledCount} of {totalParams} parameters filled</span>
                     </div>
-                    <button
-                        className="btn btn-primary calculate-btn"
-                        onClick={calculateEAI}
-                        disabled={loading}
-                    >
-                        {loading ? 'Calculating...' : 'Calculate EAI'}
-                    </button>
+
+                    {/* Water Quality Parameters */}
+                    <div className="param-category">
+                        <h4 className="category-title"> Water Quality Parameters</h4>
+                        <div className="param-grid">
+                            {ALL_PARAMS.waterQuality.map((param) => (
+                                <div key={param.id} className={`param-input ${inputValues[param.id] !== undefined ? 'filled' : ''}`}>
+                                    <label htmlFor={param.id}>
+                                        {param.label}
+                                        {param.unit && <span className="unit">({param.unit})</span>}
+                                    </label>
+                                    <input
+                                        type="number"
+                                        id={param.id}
+                                        min={param.min}
+                                        max={param.max}
+                                        step={param.step}
+                                        value={inputValues[param.id] ?? ''}
+                                        onChange={(e) => handleInputChange(param.id, e.target.value)}
+                                        placeholder={`${param.min} - ${param.max}`}
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Sediment Parameters */}
+                    <div className="param-category">
+                        <h4 className="category-title"> Sediment Parameters (Heavy Metals)</h4>
+                        <div className="param-grid">
+                            {ALL_PARAMS.sediment.map((param) => (
+                                <div key={param.id} className={`param-input ${inputValues[param.id] !== undefined ? 'filled' : ''}`}>
+                                    <label htmlFor={param.id}>
+                                        {param.label}
+                                        {param.unit && <span className="unit">({param.unit})</span>}
+                                    </label>
+                                    <input
+                                        type="number"
+                                        id={param.id}
+                                        min={param.min}
+                                        max={param.max}
+                                        step={param.step}
+                                        value={inputValues[param.id] ?? ''}
+                                        onChange={(e) => handleInputChange(param.id, e.target.value)}
+                                        placeholder={`${param.min} - ${param.max}`}
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="button-group">
+                        <button
+                            className="btn btn-secondary"
+                            onClick={clearAllInputs}
+                            disabled={filledCount === 0}
+                        >
+                            Clear All
+                        </button>
+                        <button
+                            className="btn btn-primary calculate-btn"
+                            onClick={calculateEAI}
+                            disabled={loading || filledCount === 0}
+                        >
+                            {loading ? 'Calculating...' : 'Calculate EAI'}
+                        </button>
+                    </div>
 
                     {/* Manual Input Result */}
                     {result && !result.error && (
@@ -158,7 +192,7 @@ function CalculatorPage() {
                             <div className="result-eai">{result.eai?.toFixed(1) || 'N/A'}</div>
                             <div className="result-status">{result.status_label?.vi || result.status}</div>
                             <div className="result-details">
-                                <h4>Sub-Indices:</h4>
+                                <h4>Sub-Indices (from {Object.keys(result.sub_indices || {}).length} parameters):</h4>
                                 <div className="sub-indices">
                                     {result.sub_indices && Object.entries(result.sub_indices).map(([key, value]) => (
                                         <div key={key} className="sub-index-item">
@@ -179,8 +213,9 @@ function CalculatorPage() {
                 <div className="csv-section">
                     <h3>CSV File Upload</h3>
                     <p className="csv-hint">
-                        Upload a CSV file with columns matching the parameter names
-                        ({sampleType === 'WATER_QUALITY' ? 'ph, do_man, nhiet_do_nuoc, nh3, tss, bod5' : 'as, cd, pb, cu, zn'})
+                        Upload a CSV file with any of these columns:<br />
+                        <strong>Water:</strong> ph, do_man, nhiet_do_nuoc, nh3, tss, bod5<br />
+                        <strong>Sediment:</strong> as, cd, pb, cu, zn
                     </p>
                     <div className="csv-upload">
                         <input

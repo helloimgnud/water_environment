@@ -375,8 +375,174 @@ async def get_statistics(
 
 
 # ==============================
+# PREDICTION ENDPOINTS
+# ==============================
+import os
+
+# Type indicator mapping
+TYPE_INDICATOR_MAP = {
+    "SEDIMENT": "Sediment",
+    "WATER_QUALITY_SURFACE": "Water_Surface",
+    "WATER_QUALITY_MIDDLE": "Water_Middle",
+    "WATER_QUALITY_BOTTOM": "Water_Bottom"
+}
+
+# Models directory - check Docker path first, then fallback to relative path
+_docker_models_path = "/app/models"
+_dev_models_path = os.path.join(os.path.dirname(__file__), "..", "models")
+MODELS_BASE_DIR = _docker_models_path if os.path.exists(_docker_models_path) else _dev_models_path
+
+
+@app.get("/prediction/types", tags=["Prediction"])
+async def get_prediction_types():
+    """Get available prediction types based on existing model folders"""
+    types = []
+    if os.path.exists(os.path.join(MODELS_BASE_DIR, "prophet_models_sediment")):
+        types.append({"id": "SEDIMENT", "label": "Sediment"})
+    if os.path.exists(os.path.join(MODELS_BASE_DIR, "prophet_models_water_surface")):
+        types.append({"id": "WATER_QUALITY_SURFACE", "label": "Water Quality (Surface)"})
+    if os.path.exists(os.path.join(MODELS_BASE_DIR, "prophet_models_water_middle")):
+        types.append({"id": "WATER_QUALITY_MIDDLE", "label": "Water Quality (Middle)"})
+    if os.path.exists(os.path.join(MODELS_BASE_DIR, "prophet_models_water_bottom")):
+        types.append({"id": "WATER_QUALITY_BOTTOM", "label": "Water Quality (Bottom)"})
+    return {"types": types}
+
+
+@app.get("/prediction/areas", tags=["Prediction"])
+async def get_prediction_areas(type_indicator: str = Query(..., description="Prediction type")):
+    """Get available areas for a given prediction type"""
+    type_name = TYPE_INDICATOR_MAP.get(type_indicator)
+    if not type_name:
+        raise HTTPException(status_code=400, detail="Invalid type_indicator")
+    
+    if type_name == "Sediment":
+        folder = "prophet_models_sediment"
+    else:
+        folder = f"prophet_models_{type_name.lower()}"
+    
+    folder_path = os.path.join(MODELS_BASE_DIR, folder)
+    if not os.path.exists(folder_path):
+        return {"areas": []}
+    
+    areas = [f for f in os.listdir(folder_path) if os.path.isdir(os.path.join(folder_path, f))]
+    return {"areas": sorted(areas)}
+
+
+@app.get("/prediction/stations", tags=["Prediction"])
+async def get_prediction_stations(
+    type_indicator: str = Query(..., description="Prediction type"),
+    area: str = Query(..., description="Area name")
+):
+    """Get available stations for a given area"""
+    type_name = TYPE_INDICATOR_MAP.get(type_indicator)
+    if not type_name:
+        raise HTTPException(status_code=400, detail="Invalid type_indicator")
+    
+    if type_name == "Sediment":
+        folder = "prophet_models_sediment"
+    else:
+        folder = f"prophet_models_{type_name.lower()}"
+    
+    folder_path = os.path.join(MODELS_BASE_DIR, folder, area)
+    if not os.path.exists(folder_path):
+        return {"stations": []}
+    
+    stations = [f for f in os.listdir(folder_path) if os.path.isdir(os.path.join(folder_path, f))]
+    return {"stations": sorted(stations)}
+
+
+@app.get("/prediction/historical", tags=["Prediction"])
+async def get_historical_eai(
+    region: str = Query(..., description="Region name"),
+    station: str = Query(..., description="Station ID"),
+    sample_type: Optional[str] = Query(None, description="Sample type filter"),
+    water_layer: Optional[str] = Query(None, description="Water layer filter")
+):
+    """Get historical EAI data for a station to display in chart"""
+    collection = get_samples_collection()
+    
+    query = {
+        "region": {"$regex": region, "$options": "i"},
+        "station": {"$regex": station, "$options": "i"}
+    }
+    if sample_type:
+        query["sample_type"] = sample_type
+    if water_layer:
+        query["water_layer"] = water_layer
+    
+    cursor = collection.find(query).sort("data.thoi_gian", 1).limit(500)
+    
+    historical_data = []
+    async for doc in cursor:
+        data = doc.get("data", {})
+        eai_result = calculate_sample_eai(data)
+        if eai_result["eai"] is not None:
+            historical_data.append({
+                "date": data.get("thoi_gian"),
+                "eai": eai_result["eai"],
+                "status": eai_result["status"],
+                "is_prediction": False
+            })
+    
+    return {"historical": historical_data}
+
+
+class PredictionRequest(BaseModel):
+    type_indicator: str
+    area: str
+    station: str
+
+
+@app.post("/prediction/forecast", tags=["Prediction"])
+async def generate_forecast(request: PredictionRequest):
+    """Generate 12-month EAI forecast using Prophet models"""
+    try:
+        # Import inference module
+        from inference import get_forecast_df
+        
+        # Map type indicator
+        type_name = TYPE_INDICATOR_MAP.get(request.type_indicator)
+        if not type_name:
+            raise HTTPException(status_code=400, detail="Invalid type_indicator")
+        
+        # Get forecast dataframe
+        df = get_forecast_df(type_name, request.area, request.station)
+        
+        # Convert to dict and calculate EAI for each row
+        predictions = []
+        for _, row in df.iterrows():
+            # Convert row to dict for EAI calculation
+            data = {col: row[col] for col in df.columns if col != 'thoi_gian' and row[col] is not None}
+            
+            # Calculate EAI from predicted parameters
+            eai_result = calculate_sample_eai(data)
+            
+            predictions.append({
+                "date": row["thoi_gian"],
+                "eai": eai_result["eai"],
+                "status": eai_result["status"],
+                "status_label": get_status_label(eai_result["status"]),
+                "sub_indices": eai_result["sub_indices"],
+                "is_prediction": True
+            })
+        
+        return {
+            "type_indicator": request.type_indicator,
+            "area": request.area,
+            "station": request.station,
+            "predictions": predictions
+        }
+    
+    except FileNotFoundError as e:
+        raise HTTPException(status_code=404, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Prediction error: {str(e)}")
+
+
+# ==============================
 # RUN SERVER
 # ==============================
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+
