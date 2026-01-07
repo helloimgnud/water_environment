@@ -8,7 +8,7 @@ import numpy as np  # ← THÊM IMPORT NÀY ĐỂ DÙNG np.expm1
 # CẤU HÌNH ĐƯỜNG DẪN
 # ===============================
 FOLDER_PATH = "D:\water_environment\models\prophet_models_water_surface\Deep Bay\DM2"
-OUTPUT_CSV = "forecast_summary_DS1.csv"
+OUTPUT_CSV = "forecast_summary_DM2.csv"
 
 # ===============================
 # TÌM TẤT CẢ SUBFOLDER (CỘT)
